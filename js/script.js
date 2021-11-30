@@ -3,34 +3,36 @@ const menu = document.querySelector(".menu");
 const userMenu = document.querySelector(".user-menu");
 const user = document.querySelector(".user");
  
-/* Toggle mobile menu */
-function toggleMenu() {
-    if (menu.classList.contains("active")) {
-        menu.classList.remove("active");
-         
+/* Toggle mobile menu */ //nuoli funktiot!
+ const toggleMenu = () => {
+  menu.classList.toggle('active');
+  
+    if (userMenu.classList.contains('active')) {
+        userMenu.classList.remove('active');
+    }
+    if (menu.classList.contains("active")) { 
+        // adds the close (x) icon
+        toggle.querySelector("a").innerHTML = "<i class='fas fa-times-circle'></i>"; 
+    } else {
         // adds the menu (hamburger) icon
         toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
-    } else {
-        menu.classList.add("active");
-         
-        // adds the close (x) icon
-        toggle.querySelector("a").innerHTML = "<i class='fas fa-times-circle'></i>";
     }
-}
+ }
 
 // Toggle user
 
-function toggleUser() {
-    if (userMenu.classList.contains("active")) {
-        userMenu.classList.remove("active");
-         
-        // adds the user icon
-        user.querySelector("a").innerHTML = "<i class='fas fa-user'></i>";
-    } else {
-    userMenu.classList.add("active");
+const toggleUser = () => {
+  userMenu.classList.toggle('active');
 
-        // adds the close (x) icon
-        user.querySelector("a").innerHTML = "<i class='fas fa-user'></i>";
+    if (menu.classList.contains('active')) {
+        menu.classList.remove('active');
+    }
+    if (userMenu.classList.contains("active")) { 
+      // adds the close (x) icon
+      toggle.querySelector("a").innerHTML = "<i class='fas fa-times-circle'></i>"; 
+    } else {
+        // adds the user icon
+        toggle.querySelector("a").innerHTML = '<i class="fas fa-user"></i>';
     }
 }
  
@@ -39,12 +41,12 @@ toggle.addEventListener("click", toggleMenu, false);
 
 const items = document.querySelectorAll(".item");
 
-user.addEventListener("click", toggleUser, false);
+user.addEventListener("click", toggleUser, true);
 
 
  
 /* Activate Submenu */
-function toggleItem() {
+const toggleItem = () => {
   if (this.classList.contains("submenu-active")) {
     this.classList.remove("submenu-active");
   } else if (menu.querySelector(".submenu-active")) {
