@@ -13,10 +13,9 @@
 
 <body>
     <nav>
-        <div class="container">
-            <a class="logo" href="#">Logo</a>
+        <div class="left-container">
             <ul class="menu">
-                <li class="toggle" id="hamppari"><a href="#"><i class="fas fa-bars"></i></a></li>
+                <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
                 <li class="item"><a href="#">Etusivu</a></li>
                 <li class="item has-submenu">
                     <a tabindex="0">Kategoriat</a>
@@ -27,17 +26,83 @@
                     </ul>
                 </li>
             </ul>
+        </div>
+        <a class="logo" href="#">Logo</a>
+        <div class="right-container">
             <a class="search" href="#"><i class="fas fa-search"></i></a>
             <ul class="user-menu">
                 <li class="user"><a href="#"><i class="fas fa-user"></i></a></li>
                 <li class="item button"><a href="#">Log In</a></li>
                 <li class="item button secondary"><a href="#">Sign Up</a></li>
             </ul>
-
         </div>
     </nav>
 
+    <div class="col-12">
+        <h1 class="header">Suosittua</h1>
+    </div>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img class="slideshow" src="https://picsum.photos/202/100">
+            <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img class="slideshow" src="https://picsum.photos/201/100">
+            <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img class="slideshow" src="https://picsum.photos/200/100">
+            <div class="text">Caption Three</div>
+        </div>
+    </div>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <div class="col-12">
+        <h1 class="header">Reseptit</h1>
+    </div>
+
+    <div class="col-12 recipes">
+        <div class="card col-5">
+            <img class="card-img" src="https://picsum.photos/150/" alt="Avatar">
+            <div class="card-container">
+                <h4>Otsikko</h4>
+            </div>
+        </div>
+        <div class="card col-5">
+            <img class="card-img" src="https://picsum.photos/150/" alt="Avatar">
+            <div class="card-container">
+                <h4>Otsikko</h4>
+            </div>
+        </div>
+        <div class="card col-5">
+            <img class="card-img" src="https://picsum.photos/100/" alt="Avatar">
+            <div class="card-container">
+                <h4>Otsikko</h4>
+            </div>
+        </div>
+        <div class="card col-5">
+            <img class="card-img" src="https://picsum.photos/100/" alt="Avatar">
+            <div class="card-container">
+                <h4>Otsikko</h4>
+            </div>
+        </div>
+    </div>
+
+
     <script src="js/script.js"></script>
+    <script src="js/slideshow.js"></script>
 </body>
 
 </html>
