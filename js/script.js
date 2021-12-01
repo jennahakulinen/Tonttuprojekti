@@ -47,14 +47,14 @@ user.addEventListener("click", toggleUser, true);
 
 
 /* Activate Submenu */
-const toggleItem = () => {
-  if (this.classList.contains("submenu-active")) {
-    this.classList.remove("submenu-active");
+const toggleItem = (evt) => {
+  if (evt.currentTarget.classList.contains("submenu-active")) {
+    evt.currentTarget.classList.remove("submenu-active");
   } else if (menu.querySelector(".submenu-active")) {
     menu.querySelector(".submenu-active").classList.remove("submenu-active");
-    this.classList.add("submenu-active");
+    evt.currentTarget.classList.add("submenu-active");
   } else {
-    this.classList.add("submenu-active");
+    evt.currentTarget.classList.add("submenu-active");
   }
 }
 
