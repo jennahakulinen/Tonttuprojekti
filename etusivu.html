@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav>
+    <!-- <nav>
         <div class="left-container">
             <ul class="menu">
                 <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
@@ -43,69 +43,118 @@
                 <li class="item button secondary"><a href="#">Sign Up</a></li>
             </ul>
         </div>
-    </nav>
+    </nav> -->
 
-    <div class="col-12">
-        <h1 class="header">Suosittua</h1>
-    </div>
+    <header>
+        <div class="navigation">
+            <div class="logo">
+                <h1>Cookmas</h1>
+            </div>
 
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
+            <div class="navigationButton searchBut">
+                <i class="fas fa-search icon"></i>
+            </div>
 
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-            <img class="slideshow" src="https://picsum.photos/202/100">
-            <div class="text">Caption Text</div>
+            <div class="navigationButton userBut">
+                <i class="fas fa-user icon"></i>
+            </div>
+
+            <div class="navigationButton hamBut">
+                <i class="fas fa-bars icon"></i>
+            </div>
+
+            <div class="navigationButton closeBut">
+                <i class="fas fa-times icon"></i>
+            </div>
+
+
+            <nav class="navigationNav">
+                <ul class=" navigationList">
+                    <li class="navigationItem">
+                        <a href="#" class="navigationLink">Sobre</a>
+                    </li>
+                    <li class="navigationItem">
+                        <a href="#" class="navigationLink">Habilidades</a>
+                    </li>
+                    <li class="navigationItem">
+                        <a href="#" class="navigationLink">Trabalhos</a>
+                    </li>
+                    <li class="navigationItem">
+                        <a href="#" class="navigationLink">Eventos</a>
+                    </li>
+                    <li class="navigationItem">
+                        <a href="#" class="navigationLink">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="col-12">
+            <h1 class="header">Suosittua</h1>
         </div>
 
-        <div class="mySlides fade">
-            <img class="slideshow" src="https://picsum.photos/201/100">
-            <div class="text">Caption Two</div>
-        </div>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
 
-        <div class="mySlides fade">
-            <img class="slideshow" src="https://picsum.photos/200/100">
-            <div class="text">Caption Three</div>
-        </div>
-    </div>
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img class="slideshow" src="img/image15.jpg">
+                <div class="text">Caption Text</div>
+            </div>
 
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
+            <div class="mySlides fade">
+                <img class="slideshow" src="img/image20.jpg">
+                <div class="text">Caption Two</div>
+            </div>
 
-    <div class="col-12">
-        <h1 class="header">Reseptit</h1>
-    </div>
-
-    <div class="col-12 recipes">
-        <div class="card col-5">
-            <img class="card-img" src="https://picsum.photos/150/" alt="Avatar">
-            <div class="card-container">
-                <h4>Otsikko</h4>
+            <div class="mySlides fade">
+                <img class="slideshow" src="img/image8.jpg">
+                <div class="text">Caption Three</div>
             </div>
         </div>
-        <div class="card col-5">
-            <img class="card-img" src="https://picsum.photos/150/" alt="Avatar">
-            <div class="card-container">
-                <h4>Otsikko</h4>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <div class="col-12">
+            <h1 class="header">Reseptit</h1>
+        </div>
+
+        <div class="col-12 recipes">
+            <div class="card col-5">
+                <img class="card-img" src="img/image10.jpg" alt="Avatar">
+                <div class="card-container">
+                    <h4>Otsikko</h4>
+                </div>
+            </div>
+            <div class="card col-5">
+                <img class="card-img" src="img/image11.jpg" alt="Avatar">
+                <div class="card-container">
+                    <h4>Otsikko</h4>
+                </div>
+            </div>
+            <div class="card col-5">
+                <img class="card-img" src="img/image12.jpg" alt="Avatar">
+                <div class="card-container">
+                    <h4>Otsikko</h4>
+                </div>
+            </div>
+            <div class="card col-5">
+                <img class="card-img" src="img/image13.jpg" alt="Avatar">
+                <div class="card-container">
+                    <h4>Otsikko</h4>
+                </div>
             </div>
         </div>
-        <div class="card col-5">
-            <img class="card-img" src="https://picsum.photos/100/" alt="Avatar">
-            <div class="card-container">
-                <h4>Otsikko</h4>
-            </div>
-        </div>
-        <div class="card col-5">
-            <img class="card-img" src="https://picsum.photos/100/" alt="Avatar">
-            <div class="card-container">
-                <h4>Otsikko</h4>
-            </div>
-        </div>
-    </div>
+
+    </main>
 
 
     <script src="js/script.js"></script>
