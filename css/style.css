@@ -112,6 +112,41 @@ main {
   text-decoration: none;
   transition: all 0.2s;
 }
+
+footer {
+  height: 10rem;
+  width: 100%;
+  background-color: #c30f16;
+  margin-top: 5rem;
+  padding: 10px;
+}
+
+.footer-info {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.footer-contact {
+  padding: 10px;
+}
+
+.footer-contact a {
+  color: #303030;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.fb,
+.tw,
+.ig {
+  padding-right: 10px;
+}
+
 /* 
 .navigationItem {
     margin: 1rem;
