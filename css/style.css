@@ -5,7 +5,7 @@
   margin: 0;
 }
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 16px;
   color: #303030;
   background-color: #fafafa;
@@ -14,7 +14,7 @@ nav {
   position: sticky;
   width: 100%;
   z-index: 1;
-  background: #C30F16;
+  background: #c30f16;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -111,6 +111,13 @@ a {
 }
 .fas {
   color: #fafafa;
+}
+
+footer {
+  width: 100%;
+  background-color: #c30f16;
+  color: white;
+  text-align: center;
 }
 
 /* Submenu up from mobile screens */
@@ -217,18 +224,42 @@ a {
     }
 } */
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -244,7 +275,8 @@ a {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -266,8 +298,9 @@ a {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -296,13 +329,14 @@ a {
   height: 10px;
   width: 10px;
   margin: 0 1px;
-  background-color: #A6AE9C;
+  background-color: #a6ae9c;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #901729;
 }
 
@@ -319,17 +353,25 @@ a {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .header {
-  font-family: 'Rochester', cursive;
+  font-family: "Rochester", cursive;
   text-align: center;
   padding: 15px 5px 5px 5px;
   font-size: 1.8em;
