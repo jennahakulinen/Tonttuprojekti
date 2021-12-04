@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etusivu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Rochester&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8730c9b44a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="navigation">
+                <div class="logo">
+                    <h1>Cookmas</h1>
+                </div>
+
+                <div class="navigationButton searchBut">
+                    <i class="fas fa-search icon"></i>
+                </div>
+
+                <div class="navigationButton userBut">
+                    <a href="login.html"><i class="fas fa-user icon"></i></a>
+                </div>
+
+                <div class="navigationButton hamBut">
+                    <i class="fas fa-bars icon"></i>
+                </div>
+
+                <div class="navigationButton closeBut">
+                    <i class="fas fa-times icon"></i>
+                </div>
+
+
+                <nav class="navigationNav">
+                    <ul class="navigationList">
+                        <li class="navigationItem">
+                            <a href="etusivu.html" class="navigationLink">Etusivu</a>
+                        </li>
+                        <li class="navigationItem dropdown">
+                            <button class="navigationLink dropBut">Kategoriat <i class="fas fa-caret-down"></i></a>
+                                <ul id="dropdownMenu" class="dropdownContent">
+                                    <li class="dropItem">
+                                        <a href="#">Leivonta</a>
+                                    </li>
+                                    <li class="dropItem">
+                                        <a href="#">Vegaaninen joulu</a>
+                                    </li>
+                                    <li class="dropItem">
+                                        <a href="#">Perinteinen joulupöytä</a>
+                                    </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+
+        <main>
+            <div class="col-12">
+                <h1 class="header">Suosittua</h1>
+            </div>
+
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img class="slideshow" src="img/image15.jpg">
+                    <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="slideshow" src="img/image20.jpg">
+                    <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="slideshow" src="img/image8.jpg">
+                    <div class="text">Caption Three</div>
+                </div>
+            </div>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+            <div class="col-12">
+                <h1 class="header">Reseptit</h1>
+            </div>
+
+            <div class="col-12 recipes">
+                <div class="card col-5">
+                    <div class="card-header">
+                        <img class="card-img" src="img/image10.jpg" alt="Avatar">
+                    </div>
+                    <div class="card-container">
+                        <h4 class="card-title">Otsikko</h4>
+                        <div class="info-container">
+                            <div class="user">
+                                <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo"
+                                    alt="user" />
+                                <h5 class="username">JulyDec</h5>
+                            </div>
+                            <div class="user-info">
+                                <i class="fas fa-candy-cane"></i>4.8/5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card col-5">
+                    <img class="card-img" src="img/image11.jpg" alt="Avatar">
+                    <div class="card-container">
+                        <h4 class="card-title">Otsikko</h4>
+                        <div class="info-container">
+                            <div class="user">
+                                <img src="https://lh3.googleusercontent.com/ogw/ADGmqu8sn9zF15pW59JIYiLgx3PQ3EyZLFp5Zqao906l=s32-c-mo"
+                                    alt="user" />
+                                <h5 class="username">BestCook4Ever</h5>
+                            </div>
+                            <div class="user-info">
+                                <i class="fas fa-candy-cane"></i>3.2/5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-5">
+                    <img class="card-img" src="img/image12.jpg" alt="Avatar">
+                    <div class="card-container">
+                        <h4 class="card-title">Otsikko</h4>
+                        <div class="info-container">
+                            <div class="user">
+                                <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo"
+                                    alt="user" />
+                                <h5 class="username">Username</h5>
+                            </div>
+                            <div class="user-info">
+                                <i class="fas fa-candy-cane"></i>4.8/5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card col-5">
+                    <img class="card-img" src="img/image13.jpg" alt="Avatar">
+                    <div class="card-container">
+                        <h4 class="card-title">Otsikko</h4>
+                        <div class="info-container">
+                            <div class="user">
+                                <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo"
+                                    alt="user" />
+                                <h5 class="username">Username</h5>
+                            </div>
+                            <div class="user-info">
+                                <i class="fas fa-candy-cane"></i>4.8/5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <h1>Cookmas</h1>
+                </div>
+                <div class="footer-contact">
+                    <a href="#">cookmas@contact.com</a>
+                </div>
+            </div>
+            <div class="footer-social">
+                <div class="fb"><i class="fab fa-facebook fa-2x"></i></div>
+                <div class="tw"><i class="fab fa-twitter fa-2x"></i></div>
+                <div class="ig"><i class="fab fa-instagram fa-2x"></i></div>
+            </div>
+            
+        </div>
+
+        <div class="footer-bottom">
+            &copy; Tontut
+        </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+    <script src="js/slideshow.js"></script>
+
+</body>
+
+</html>

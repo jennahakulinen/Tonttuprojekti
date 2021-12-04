@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etusivu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Rochester&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8730c9b44a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="navigation">
+                <div class="logo">
+                    <h1>Cookmas</h1>
+                </div>
+
+                <div class="navigationButton searchBut">
+                    <i class="fas fa-search icon"></i>
+                </div>
+
+                <div class="navigationButton userBut">
+                    <a href="login.html"><i class="fas fa-user icon"></i></a>
+                </div>
+
+                <div class="navigationButton hamBut">
+                    <i class="fas fa-bars icon"></i>
+                </div>
+
+                <div class="navigationButton closeBut">
+                    <i class="fas fa-times icon"></i>
+                </div>
+
+
+                <nav class="navigationNav">
+                    <ul class="navigationList">
+                        <li class="navigationItem">
+                            <a href="etusivu.html" class="navigationLink">Etusivu</a>
+                        </li>
+                        <li class="navigationItem dropdown">
+                            <button class="navigationLink dropBut">Kategoriat <i class="fas fa-caret-down"></i></a>
+                                <ul id="dropdownMenu" class="dropdownContent">
+                                    <li class="dropItem">
+                                        <a href="#">Leivonta</a>
+                                    </li>
+                                    <li class="dropItem">
+                                        <a href="#">Vegaaninen joulu</a>
+                                    </li>
+                                    <li class="dropItem">
+                                        <a href="#">Perinteinen joulupöytä</a>
+                                    </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-login">
+            <div class="center">
+                <h1 class="header">Kirjaudu sisään</h1>
+                <form method="post">
+                    <div class="txt_field">
+                        <input type="text" required>
+                        <span></span>
+                        <label>Käyttäjätunnus</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="password" required>
+                        <span></span>
+                        <label>Salasana</label>
+                    </div>
+                    <!-- <div class="pass">Forgot Password?</div> -->
+                    <input type="submit" value="Kirjaudu">
+                    <div class="signup_link">
+                        Uusi käyttäjä? <a href="#">Rekisteröidy tästä</a>
+                    </div>
+                </form>
+            </div>
+        </main>        
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <h1>Cookmas</h1>
+                </div>
+                <div class="footer-contact">
+                    <a href="#">cookmas@contact.com</a>
+                </div>
+            </div>
+            <div class="footer-social">
+                <div class="fb"><i class="fab fa-facebook fa-2x"></i></div>
+                <div class="tw"><i class="fab fa-twitter fa-2x"></i></div>
+                <div class="ig"><i class="fab fa-instagram fa-2x"></i></div>
+            </div>
+            
+        </div>
+
+        <div class="footer-bottom">
+            &copy; Tontut
+        </div>
+    </footer>
+
+    
+
+    <script src="js/script.js"></script>
+    <script src="js/slideshow.js"></script>
+
+</body>
+
+</html>
