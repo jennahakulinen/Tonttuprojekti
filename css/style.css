@@ -4,14 +4,17 @@
   margin: 0;
 }
 
-html, body {
+html,
+body {
   width: 100%;
-  height: 100%; 
+  height: 100%;
 }
 
 .wrapper {
   position: relative;
   overflow: hidden;
+  min-height: 100%;
+  padding-bottom: 20vh;
 }
 
 body {
@@ -94,7 +97,6 @@ main {
   overflow: hidden;
 }
 
-
 .navigationList {
   /*@include center;*/
   position: absolute;
@@ -147,7 +149,7 @@ main {
 .main-login {
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 20vh;
 }
 
 .center {
@@ -274,13 +276,22 @@ input[type="submit"]:hover {
 }
 
 footer {
-  position: sticky;
+  height: 200px;
+  background-color: #187200;
+  color: #303030;
+  position: relative;
+}
+
+.footer-bottom {
+  background-color: #7d9870;
+  color: #303030;
+  height: 50px;
+  text-align: center;
+  position: absolute;
   bottom: 0;
-  height: 10rem;
+  left: 0;
+  padding-top: 15px;
   width: 100%;
-  background-color: #c30f16;
-  margin-top: 10rem;
-  padding: 10px;
 }
 
 .footer-info {
@@ -308,6 +319,8 @@ footer {
 .ig {
   padding-right: 10px;
 }
+
+/*  */
 
 /*
   .navigationItem {
