@@ -6,7 +6,7 @@ const userBtn = document.querySelector(".userBut");
 const closeBtn = document.querySelector(".closeBut");
 const dropdownBtn = document.querySelector(".dropBut");
 const dropdownMenu = document.getElementById("dropdownMenu");
-const userMenu = document.querySelector(".user-menu");
+const userMenu = document.querySelector(".userNav");
 const user = document.querySelector(".user");
 const search = document.querySelector(".search");
 const body = document.querySelector("body");
@@ -34,8 +34,16 @@ const hideNav = () => {
   menu.classList.remove('active');
 }
 
+// const showUserNav = () => {
+//   userMenu.classList.toggle('active');
+// }
+
+// const hideUserNav = () => {
+//   userMenu.classList.remove('active');
+// }
+
+
 menuBtn.onclick = () => {
-  menu.style.opacity = "100%";
   closeBtn.style.display = "block";
   menuBtn.style.display = "none";
   searchBtn.style.display = "none";
@@ -46,7 +54,6 @@ menuBtn.onclick = () => {
 }
 
 closeBtn.onclick = () => {
-  menu.style.opacity = "60%";
   menuBtn.style.display = "block";
   closeBtn.style.display = "none";
   menuBtn.style.display = "block";
@@ -56,6 +63,17 @@ closeBtn.onclick = () => {
   hideNav();
   enableScrolling();
 }
+
+// userBtn.onclick = () => {
+//   closeBtn.style.display = "block";
+//   menuBtn.style.display = "none";
+//   searchBtn.style.display = "none";
+//   userBtn.style.display = "none";
+//   body.style.overflow = "hidden";
+//   showUserNav();
+// }
+
+
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */

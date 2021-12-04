@@ -16,72 +16,78 @@
 </head>
 
 <body>
-    <header>
-        <div class="navigation">
-            <div class="logo">
-                <h1>Cookmas</h1>
+    <div class="wrapper">
+        <header>
+            <div class="navigation">
+                <div class="logo">
+                    <h1>Cookmas</h1>
+                </div>
+
+                <div class="navigationButton searchBut">
+                    <i class="fas fa-search icon"></i>
+                </div>
+
+                <div class="navigationButton userBut">
+                    <a href="login.html"><i class="fas fa-user icon"></i></a>
+                </div>
+
+                <div class="navigationButton hamBut">
+                    <i class="fas fa-bars icon"></i>
+                </div>
+
+                <div class="navigationButton closeBut">
+                    <i class="fas fa-times icon"></i>
+                </div>
+
+
+                <nav class="navigationNav">
+                    <ul class="navigationList">
+                        <li class="navigationItem">
+                            <a href="etusivu.html" class="navigationLink">Etusivu</a>
+                        </li>
+                        <li class="navigationItem dropdown">
+                            <button class="navigationLink dropBut">Kategoriat <i class="fas fa-caret-down"></i></a>
+                                <ul id="dropdownMenu" class="dropdownContent">
+                                    <li class="dropItem">
+                                        <a href="#">Leivonta</a>
+                                    </li>
+                                    <li class="dropItem">
+                                        <a href="#">Vegaaninen joulu</a>
+                                    </li>
+                                    <li class="dropItem">
+                                        <a href="#">Perinteinen joulupöytä</a>
+                                    </li>
+                                </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
+        </header>       
+    </div>
 
-            <div class="navigationButton searchBut">
-                <i class="fas fa-search icon"></i>
-            </div>
-
-            <div class="navigationButton userBut">
-                <i class="fas fa-user icon"></i>
-            </div>
-
-            <div class="navigationButton hamBut">
-                <i class="fas fa-bars icon"></i>
-            </div>
-
-            <div class="navigationButton closeBut">
-                <i class="fas fa-times icon"></i>
-            </div>
-
-
-            <nav class="navigationNav">
-                <ul class="navigationList">
-                    <li class="navigationItem">
-                        <a href="etusivu.html" class="navigationLink">Etusivu</a>
-                    </li>
-                    <li class="navigationItem dropdown">
-                        <button class="navigationLink dropBut">Kategoriat <i class="fas fa-caret-down"></i></a>
-                            <ul id="dropdownMenu" class="dropdownContent">
-                                <li class="dropItem">
-                                    <a href="#">Leivonta</a>
-                                </li>
-                                <li class="dropItem">
-                                    <a href="#">Vegaaninen joulu</a>
-                                </li>
-                                <li class="dropItem">
-                                    <a href="#">Perinteinen joulupöytä</a>
-                                </li>
-                            </ul>
-                    </li>
-                    <li class="navigationItem">
-                        <a href="#" class="navigationLink">Trabalhos</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-<main class="main-register">
     <footer>
-        <div class="footer-info">
-            <div class="footer-logo">
-                <h1>Cookmas</h1>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <h1>Cookmas</h1>
+                </div>
+                <div class="footer-contact">
+                    <a href="#">cookmas@contact.com</a>
+                </div>
             </div>
-            <div class="footer-contact">
-                <a href="#">cookmas@contact.com</a>
+            <div class="footer-social">
+                <div class="fb"><i class="fab fa-facebook fa-2x"></i></div>
+                <div class="tw"><i class="fab fa-twitter fa-2x"></i></div>
+                <div class="ig"><i class="fab fa-instagram fa-2x"></i></div>
             </div>
+            
         </div>
-        <div class="footer-social">
-            <div class="fb"><i class="fab fa-facebook fa-2x"></i></div>
-            <div class="tw"><i class="fab fa-twitter fa-2x"></i></div>
-            <div class="ig"><i class="fab fa-instagram fa-2x"></i></div>
+
+        <div class="footer-bottom">
+            &copy; Tontut
         </div>
     </footer>
-</main>
+
     
 
     <script src="js/script.js"></script>
