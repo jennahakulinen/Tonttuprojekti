@@ -31,8 +31,16 @@ main {
 
 .logo {
   position: absolute;
-  top: 1.6rem;
-  left: 1rem;
+  top: 1rem;
+  left: 0;
+}
+
+.logo-img {
+  width: 15rem;
+}
+
+.logo-img-footer {
+  width: 12rem;
 }
 
 .navigationButton {
@@ -284,7 +292,7 @@ input[type="submit"]:hover {
 }
 
 footer {
-  height: 200px;
+  height: 210px;
   background-color: #187200;
   color: #303030;
   position: relative;
