@@ -62,7 +62,41 @@
                     </ul>
                 </nav>
             </div>
-        </header>       
+        </header>
+        <main class="main-login">
+            <div class="center">
+                <h1 class="header">Rekisteröidy</h1>
+                <form method="post">
+                    <div class="txt_field">
+                        <input type="email" name="email" required>
+                        <span></span>
+                        <label>Sähköposti</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="text" name="username" required>
+                        <span></span>
+                        <label>Käyttäjätunnus</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="text" name="city" required>
+                        <span></span>
+                        <label>Kaupunki</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="password" name="password" required>
+                        <span></span>
+                        <label>Salasana</label>
+                    </div>
+                    <div class="txt_field">
+                        <form>
+                            <h4 id="profilepic">Profiilikuva</h4>
+                            <input type="file" id="myFile" name="filename">
+                          </form>
+                    </div>
+                    <input type="submit" value="Tallenna">
+                </form>
+            </div>
+        </main>    
     </div>
 
     <footer>

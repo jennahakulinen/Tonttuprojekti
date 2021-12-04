@@ -153,7 +153,7 @@ main {
 .main-login {
   display: flex;
   justify-content: center;
-  padding-top: 20vh;
+  padding-top: 10vh;
 }
 
 .center {
@@ -250,6 +250,10 @@ input[type="submit"]:hover {
 }
 .signup_link a:hover {
   text-decoration: underline;
+}
+
+#profilepic {
+  margin: 5px;
 }
 
 /* .dropdownContent a {
