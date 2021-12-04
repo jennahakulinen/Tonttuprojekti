@@ -38,7 +38,7 @@ main {
   background-color: #c30f16;
   border-radius: 50%;
   z-index: 300;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   cursor: pointer;
   height: 4rem;
   width: 4rem;
@@ -84,7 +84,6 @@ main {
   right: -100%;
   height: 100vh;
   width: 100%;
-  opacity: 100%;
   z-index: 200;
   transition: all 400ms ease-in;
 }
@@ -93,6 +92,11 @@ main {
   right: 0;
   overflow: hidden;
 }
+
+/* .userNav.active {
+  right: 0;
+  overflow: hidden;
+} */
 
 
 .navigationList {
@@ -665,13 +669,14 @@ footer {
   position: relative;
   margin: auto;
   padding: 10px;
-  height: 15rem;
+  height: 18rem;
   overflow: hidden;
 }
 
 /* Hide the images by default */
 .mySlides {
   display: none;
+  height: fit-content;
 }
 
 /* Next & previous buttons */
@@ -779,16 +784,31 @@ footer {
 }
 
 .card {
-  /* Add shadows to create the "card" effect */
-  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
   margin: 10px;
-  border: 4px solid #187200;
   width: calc(50% - 20px);
+  height: 280px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-title {
+  padding: 2px;
+}
+
+.fa-candy-cane {
+  color: #187200;
+  margin-right: 2px;
+}
+
+
+.card-img:hover {
+opacity: 85%;
 }
 
 /* Add some padding inside the card container */
 .card-container {
-  padding: 2px 16px;
+  padding: 2px 10px;
   text-align: center;
 }
 
@@ -799,9 +819,45 @@ footer {
   align-items: center;
 }
 
+.info-container {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .card-img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
+
+.user {
+  margin-top: auto;
+}
+
+.username {
+  float: right;
+  margin-top: 10px;
+}
+
+/* .user:first-child {
+  margin-right: 20px;
+} */
+
+.user img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+}
+.user-info {
+  display: flex;
+}
+
 
 /*
   Värit
