@@ -17,13 +17,11 @@ const disableScrolling = () => {
   let y = window.scrollY;
   window.onscroll = () => {
     window.scrollTo(x, y);
-    body.classList.toggle("lockScroll");
   };
 }
 
 const enableScrolling = () => {
   window.onscroll = () => {
-    body.classList.remove("lockScroll");
   };
 }
 
@@ -42,6 +40,7 @@ menuBtn.onclick = () => {
   menuBtn.style.display = "none";
   searchBtn.style.display = "none";
   userBtn.style.display = "none";
+  body.style.overflow = "hidden";
   showNav();
   disableScrolling();
 }
@@ -53,6 +52,7 @@ closeBtn.onclick = () => {
   menuBtn.style.display = "block";
   searchBtn.style.display = "block";
   userBtn.style.display = "block";
+  body.style.overflow = "visible";
   hideNav();
   enableScrolling();
 }

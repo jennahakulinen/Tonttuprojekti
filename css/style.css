@@ -94,9 +94,6 @@ main {
   overflow: hidden;
 }
 
-.lockScroll {
-  overflow: hidden;
-}
 
 .navigationList {
   /*@include center;*/
