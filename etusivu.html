@@ -45,139 +45,143 @@
             </ul>
         </div>
     </nav> -->
-    <header>
-        <div class="navigation">
-            <div class="logo">
-                <h1>Cookmas</h1>
+    <div class="wrapper">
+        <header>
+            <div class="navigation">
+                <div class="logo">
+                    <h1>Cookmas</h1>
+                </div>
+
+                <div class="navigationButton searchBut">
+                    <i class="fas fa-search icon"></i>
+                </div>
+
+                <div class="navigationButton userBut">
+                    <i class="fas fa-user icon"></i>
+                </div>
+
+                <div class="navigationButton hamBut">
+                    <i class="fas fa-bars icon"></i>
+                </div>
+
+                <div class="navigationButton closeBut">
+                    <i class="fas fa-times icon"></i>
+                </div>
+
+
+                <nav id="nav" class="navigationNav">
+                    <ul class="navigationList">
+                        <li class="navigationItem">
+                            <a href="etusivu.html" class="navigationLink">Etusivu</a>
+                        </li>
+                        <li class="navigationItem dropdown">
+                            <button class="navigationLink dropBut">Kategoriat <i class="fas fa-caret-down"></i></a>
+                                <ul id="dropdownMenu" class="dropdownContent">
+                                    <li class="dropItem">
+                                        <a href="#">Leivonta</a>
+                                    </li>
+                                    <li class="dropItem">
+                                        <a href="#">Vegaaninen joulu</a>
+                                    </li>
+                                    <li class="dropItem">
+                                        <a href="#">Perinteinen joulupöytä</a>
+                                    </li>
+                                </ul>
+                        </li>
+                        <li class="navigationItem">
+                            <a href="#" class="navigationLink">Trabalhos</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+
+        <main>
+            <div class="col-12">
+                <h1 class="header">Suosittua</h1>
             </div>
 
-            <div class="navigationButton searchBut">
-                <i class="fas fa-search icon"></i>
-            </div>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
 
-            <div class="navigationButton userBut">
-                <i class="fas fa-user icon"></i>
-            </div>
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img class="slideshow" src="img/image15.jpg">
+                    <div class="text">Caption Text</div>
+                </div>
 
-            <div class="navigationButton hamBut">
-                <i class="fas fa-bars icon"></i>
-            </div>
+                <div class="mySlides fade">
+                    <img class="slideshow" src="img/image20.jpg">
+                    <div class="text">Caption Two</div>
+                </div>
 
-            <div class="navigationButton closeBut">
-                <i class="fas fa-times icon"></i>
-            </div>
-
-
-            <nav class="navigationNav">
-                <ul class="navigationList">
-                    <li class="navigationItem">
-                        <a href="etusivu.html" class="navigationLink">Etusivu</a>
-                    </li>
-                    <li class="navigationItem dropdown">
-                        <button class="navigationLink dropBut">Kategoriat <i class="fas fa-caret-down"></i></a>
-                            <ul id="dropdownMenu" class="dropdownContent">
-                                <li class="dropItem">
-                                    <a href="#">Leivonta</a>
-                                </li>
-                                <li class="dropItem">
-                                    <a href="#">Vegaaninen joulu</a>
-                                </li>
-                                <li class="dropItem">
-                                    <a href="#">Perinteinen joulupöytä</a>
-                                </li>
-                            </ul>
-                    </li>
-                    <li class="navigationItem">
-                        <a href="#" class="navigationLink">Trabalhos</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-
-    <main>
-        <div class="col-12">
-            <h1 class="header">Suosittua</h1>
-        </div>
-
-        <!-- Slideshow container -->
-        <div class="slideshow-container">
-
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-                <img class="slideshow" src="img/image15.jpg">
-                <div class="text">Caption Text</div>
-            </div>
-
-            <div class="mySlides fade">
-                <img class="slideshow" src="img/image20.jpg">
-                <div class="text">Caption Two</div>
-            </div>
-
-            <div class="mySlides fade">
-                <img class="slideshow" src="img/image8.jpg">
-                <div class="text">Caption Three</div>
-            </div>
-        </div>
-
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-
-        <div class="col-12">
-            <h1 class="header">Reseptit</h1>
-        </div>
-
-        <div class="col-12 recipes">
-            <div class="card col-5">
-                <img class="card-img" src="img/image10.jpg" alt="Avatar">
-                <div class="card-container">
-                    <h4>Otsikko</h4>
+                <div class="mySlides fade">
+                    <img class="slideshow" src="img/image8.jpg">
+                    <div class="text">Caption Three</div>
                 </div>
             </div>
-            <div class="card col-5">
-                <img class="card-img" src="img/image11.jpg" alt="Avatar">
-                <div class="card-container">
-                    <h4>Otsikko</h4>
-                </div>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
-            <div class="card col-5">
-                <img class="card-img" src="img/image12.jpg" alt="Avatar">
-                <div class="card-container">
-                    <h4>Otsikko</h4>
-                </div>
+
+            <div class="col-12">
+                <h1 class="header">Reseptit</h1>
             </div>
-            <div class="card col-5">
-                <img class="card-img" src="img/image13.jpg" alt="Avatar">
-                <div class="card-container">
-                    <h4>Otsikko</h4>
-                </div>
-            </div>
-            <footer>
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <h1>Cookmas</h1>
-                    </div>
-                    <div class="footer-contact">
-                        <a href="#">cookmas@contact.com</a>
+
+            <div class="col-12 recipes">
+                <div class="card col-5">
+                    <img class="card-img" src="img/image10.jpg" alt="Avatar">
+                    <div class="card-container">
+                        <h4>Otsikko</h4>
                     </div>
                 </div>
-                <div class="footer-social">
-                    <div class="fb"><i class="fab fa-facebook fa-2x"></i></div>
-                    <div class="tw"><i class="fab fa-twitter fa-2x"></i></div>
-                    <div class="ig"><i class="fab fa-instagram fa-2x"></i></div>
+                <div class="card col-5">
+                    <img class="card-img" src="img/image11.jpg" alt="Avatar">
+                    <div class="card-container">
+                        <h4>Otsikko</h4>
+                    </div>
                 </div>
-            </footer>
-        </div>
-    </main>
+                <div class="card col-5">
+                    <img class="card-img" src="img/image12.jpg" alt="Avatar">
+                    <div class="card-container">
+                        <h4>Otsikko</h4>
+                    </div>
+                </div>
+                <div class="card col-5">
+                    <img class="card-img" src="img/image13.jpg" alt="Avatar">
+                    <div class="card-container">
+                        <h4>Otsikko</h4>
+                    </div>
+                </div>
+            </div>
+        </main>
 
+        <footer>
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <h1>Cookmas</h1>
+                </div>
+                <div class="footer-contact">
+                    <a href="#">cookmas@contact.com</a>
+                </div>
+            </div>
+            <div class="footer-social">
+                <div class="fb"><i class="fab fa-facebook fa-2x"></i></div>
+                <div class="tw"><i class="fab fa-twitter fa-2x"></i></div>
+                <div class="ig"><i class="fab fa-instagram fa-2x"></i></div>
+            </div>
+        </footer>
 
+    </div>
     <script src="js/script.js"></script>
     <script src="js/slideshow.js"></script>
+
 </body>
 
 </html>

@@ -17,32 +17,43 @@ const disableScrolling = () => {
   let y = window.scrollY;
   window.onscroll = () => {
     window.scrollTo(x, y);
+    body.classList.toggle("lockScroll");
   };
 }
 
 const enableScrolling = () => {
   window.onscroll = () => {
+    body.classList.remove("lockScroll");
   };
+}
+
+
+const showNav = () => {
+  menu.classList.toggle('active');
+}
+
+const hideNav = () => {
+  menu.classList.remove('active');
 }
 
 menuBtn.onclick = () => {
   menu.style.opacity = "100%";
-  menu.style.right = "0";
   closeBtn.style.display = "block";
   menuBtn.style.display = "none";
   searchBtn.style.display = "none";
   userBtn.style.display = "none";
+  showNav();
   disableScrolling();
 }
 
 closeBtn.onclick = () => {
   menu.style.opacity = "60%";
-  menu.style.right = "-100%";
   menuBtn.style.display = "block";
   closeBtn.style.display = "none";
   menuBtn.style.display = "block";
   searchBtn.style.display = "block";
   userBtn.style.display = "block";
+  hideNav();
   enableScrolling();
 }
 
