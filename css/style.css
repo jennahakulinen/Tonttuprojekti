@@ -31,12 +31,12 @@ main {
 
 .logo {
   position: absolute;
-  top: 1rem;
-  left: 0;
+  top: 0.8rem;
+  left: 0.8rem;
 }
 
 .logo-img {
-  width: 15rem;
+  width: 13rem;
 }
 
 .logo-img-footer {
@@ -51,13 +51,13 @@ main {
   z-index: 300;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   cursor: pointer;
-  height: 4rem;
-  width: 4rem;
+  height: 3.5rem;
+  width: 3.5rem;
 }
 
 .closeBut {
-  top: 1rem;
-  right: 1rem;
+  top: 1.1rem;
+  right: 0.8rem;
   display: none;
   background-color: #fafafa;
 }
@@ -67,25 +67,25 @@ main {
 }
 
 .hamBut {
-  top: 1rem;
-  right: 1rem;
+  top: 1.1rem;
+  right: 0.8rem;
 }
 
 .searchBut {
-  top: 1rem;
-  right: 10rem;
+  top: 1.1rem;
+  right: 8.8rem;
 }
 
 .userBut {
-  top: 1rem;
-  right: 5.5rem;
+  top: 1.1rem;
+  right: 4.8rem;
 }
 
 .icon {
   position: relative;
-  top: 1.2rem;
+  top: 1.1rem;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #fafafa;
 }
 
@@ -316,7 +316,7 @@ footer {
 }
 
 .footer-contact {
-  padding: 10px;
+  padding: 0 10px 10px 10px;
 }
 
 .footer-contact a {
@@ -811,7 +811,7 @@ footer {
 .card {
   margin: 10px;
   width: calc(50% - 20px);
-  height: 280px;
+  height: 260px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
   overflow: hidden;
@@ -823,7 +823,8 @@ footer {
 
 .fa-candy-cane {
   color: #187200;
-  margin-right: 2px;
+  margin-right: 3px;
+  margin-top: 3px;
 }
 
 .card-img:hover {
@@ -853,7 +854,7 @@ footer {
 
 .card-img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -864,8 +865,9 @@ footer {
 }
 
 .username {
+  font-size: 0.7em;
   float: right;
-  margin-top: 10px;
+  margin-top: 11px;
 }
 
 /* .user:first-child {
@@ -880,6 +882,8 @@ footer {
 }
 .user-info {
   display: flex;
+  font-size: 0.8em;
+  align-items: center;
 }
 
 /*
