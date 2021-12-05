@@ -950,7 +950,7 @@ footer {
   font-size: 32px;
   cursor: pointer;
   position: relative;
-  opacity: 0.75;
+  opacity: 0.7;
   transition: all 300ms ease-in-out;
 }
 
@@ -966,7 +966,7 @@ footer {
   transform: translate(-50%, -50%);
   width: 50px;
   height: 50px;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: #187200;
   border-radius: 50%;
   z-index: -99;
 }
