@@ -622,6 +622,100 @@ footer {
   float: right;
 }
 
+
+/* RECIPE PAGE */
+
+.recipe-header-img {
+  margin: 0 10px;
+  /* border-bottom: 1px solid #c30f16; */
+}
+
+.recipe-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.recipe-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0.5rem;
+}
+
+
+.recipe-name h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1em;
+  margin: 0.5rem 1rem 0.5rem 0.5rem;
+}
+
+.rate {
+  color: #303030;
+  font-size: 1em;
+}
+
+.rates:hover > .rate:before {
+  color: #187200;
+  cursor: pointer;
+}
+
+.rates > .rate:hover ~ .rate:before {
+  color: #303030;
+}
+
+.recipe-user {
+  display: flex;
+}
+
+.recipe-username {
+  font-size: 0.7em;
+  margin-top: 11px;
+}
+
+.recipe-user img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+}
+
+.recipe-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.recipe-h {
+  text-align: left;
+  margin: 0 0.5rem;
+}
+
+.recipe-steps, .recipe-ingredients {
+  margin: 0 2rem;
+}
+
+.recipe-steps ul li {
+  padding: 0.5em;
+}
+
+.re-hr {
+  border: 0;
+  height: 1px;
+  background: #c30f16;
+  background-image: linear-gradient(to right, #fafafa, #c30f16, #fafafa);
+  margin-top: 1rem;
+}
+
+
+.recipe-ingredients ul li {
+  padding: 0.5em;
+}
+
 /*
   Värit
   Tummanharmaa: #303030
