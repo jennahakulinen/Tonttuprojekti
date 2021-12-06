@@ -1,3 +1,5 @@
+/* BASIC STYLING */
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -43,10 +45,16 @@ main {
   width: 12rem;
 }
 
+
+
+
+/* NAVIGATION */
+
 .navigationButton {
   position: absolute;
   text-align: center;
   background-color: #c30f16;
+  border-style: none;
   border-radius: 50%;
   z-index: 300;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -62,7 +70,7 @@ main {
   background-color: #fafafa;
 }
 
-.fa-times {
+.menuclose {
   color: #c30f16 !important;
 }
 
@@ -76,17 +84,15 @@ main {
   right: 8.8rem;
 }
 
+.closeSearchBut {
+  top: 1.1rem;
+  right: 0.8rem;
+  display: none;
+}
+
 .userBut {
   top: 1.1rem;
   right: 4.8rem;
-}
-
-.icon {
-  position: relative;
-  top: 1.1rem;
-  text-align: center;
-  font-size: 1.2em;
-  color: #fafafa;
 }
 
 .navigationNav {
@@ -104,13 +110,7 @@ main {
   overflow: hidden;
 }
 
-/* .userNav.active {
-  right: 0;
-  overflow: hidden;
-} */
-
 .navigationList {
-  /*@include center;*/
   position: absolute;
   top: 50%;
   left: 50%;
@@ -118,6 +118,17 @@ main {
   text-align: center;
   width: 100%;
   list-style: none;
+}
+
+.navigationLink:link,
+.navigationLink:visited {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  color: #fafafa;
+  font-size: 2.4rem;
+  text-decoration: none;
+  transition: all 0.2s;
 }
 
 .dropdown {
@@ -157,7 +168,72 @@ main {
   cursor: pointer;
 }
 
-/* Login and register page */
+
+
+
+/* SEARCH */
+
+.search-box {
+  position: absolute;
+  visibility: hidden;
+  top: 1rem;
+  left: 0.625rem;
+  width: 79%;
+  height: 3.5rem;
+  z-index: 500;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-top: 0.25rem;
+  box-shadow: rgba(63, 63, 63, 0.2) 0px 2px 8px 0px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.input-search {
+  width: 90%;
+  height: 3rem;
+  flex-grow: 2;
+  border: none;
+  background-color: #fafafa;
+  font-size: 1em;
+  font-family: inherit;
+  padding-left: 10px;
+}
+
+.input-search:focus {
+  outline: none;
+}
+
+.search-form-button {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #187200;
+}
+
+.search-icon {
+  color: #fafafa;
+}
+
+.icon {
+  position: relative;
+  top: 0;
+  text-align: center;
+  font-size: 1.5em;
+  color: #fafafa;
+}
+
+
+
+/* LOGIN AND REGISTER PAGE */
+
 .main-login {
   display: flex;
   justify-content: center;
@@ -264,32 +340,10 @@ input[type="submit"]:hover {
   margin: 5px;
 }
 
-/* .dropdownContent a {
-  color: #fafafa;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  } */
-/*
-  /* Change color of dropdown links on hover
-  .dropdownContent a:hover {background-color: #ddd;}
 
-  /* Show the dropdown menu on hover
-  .dropdown:hover .dropdownContent {display: block;}
 
-  /* Change the background color of the dropdown button when the dropdown content is shown
-  .dropdown:hover .dropBut {background-color: #3e8e41;} */
 
-.navigationLink:link,
-.navigationLink:visited {
-  display: inline-block;
-  padding: 1rem 2rem;
-  text-transform: uppercase;
-  color: #fafafa;
-  font-size: 2.4rem;
-  text-decoration: none;
-  transition: all 0.2s;
-}
+/* FOOTER */
 
 footer {
   height: 210px;
@@ -336,320 +390,9 @@ footer {
   padding-right: 10px;
 }
 
-/*  */
-
-/*
-  .navigationItem {
-  margin: 1rem;
-  }
-
-  */
-
-/*
-  .navigation__link span {
-  margin-right: 1.5rem;
-  display: inline-block;
-  }
-
-  .navigationLink:hover {
-  color: #C1D0D0;
-  transform: scale(1.1);
-  }
-
-  .navigation__checkbox:checked~.navigation__background {
-  transform: scale(80)
-  }
-
-  .navigation__checkbox:checked~.navigation__nav {
-  width: 100%;
-  visibility: visible;
-  opacity: 1;
-  }
-
-  .navigation__icon {
-
-  position: relative;
-  margin-top: 2.5rem;
-  }
-
-  @media screen and (min-width: 768px) {
-  .navigation__icon {
-  margin-top: 3.5rem;
-  }
-  }
 
 
-
-  @media (min-width: 768px) {
-  .navigation__icon,
-  .navigation__icon::before,
-  .navigation__icon::after {
-  width: 3rem;
-  }
-  }
-  */
-
-/* .navigation__icon,
-  .navigation__icon::before,
-  .navigation__icon::after {
-  display: inline-block;
-  width: 2.2rem;
-  height: 2px;
-  background-color: #4A676A;
-  }
-
-  .navigation__icon::before,
-  .navigation__icon::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  transition: all 200ms;
-  }
-
-  .navigation__icon::before {
-  top: -.8rem;
-  }
-
-  .navigation__icon::after {
-  top: .8rem;
-  }
-
-  .navigation__button:hover .navigation__icon::before {
-  top: -1rem;
-  }
-
-  .navigation__button:hover .navigation__icon::after {
-  top: 1rem;
-  }
-
-
-  .navigation__checkbox:checked+.navigation__button .navigation__icon {
-  background-color: transparent;
-  }
-
-  .navigation__checkbox:checked+.navigation__button .navigation__icon::before {
-  top: 0;
-  transform: rotate(135deg);
-  }
-
-  .navigation__checkbox:checked+.navigation__button .navigation__icon::after {
-  top: 0;
-  transform: rotate(-135deg);
-  } */
-
-/*
-  light-blue: #C1D0D0;
-  dark-blue: #4A676A;
-  cream: #FFEAA5;
-  yellow: #FFB037;
-  */
-
-/* nav {
-  position: sticky;
-  width: 100%;
-  z-index: 1;
-  background: #C30F16;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  }
-  a {
-  color: white;
-  text-decoration: none;
-  }
-
-  .menu,
-  .user-menu {
-  position: absolute;
-  top: -15px;
-  }
-
-  .search {
-  position: absolute;
-  right: 30px;
-  }
-
-  .menu,
-  .submenu,
-  .user-menu,
-  .logo {
-  list-style-type: none;
-  }
-  .logo {
-  font-size: 20px;
-  padding: 7.5px 10px 7.5px 0;
-  align-self: center;
-  }
-  .item {
-  padding: 10px;
-  }
-  .item.button {
-  padding: 9px 5px;
-  }
-  .item:not(.button) a:hover,
-  .item a:hover::after {
-  color: #ccc;
-  }
-
-  Mobile menu
-  .left-container {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 50%;
-  }
-
-  .right-container {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 50%;
-  }
-
-  .menu li a {
-  display: block;
-  padding: 15px 5px;
-  }
-  .menu li.subitem a {
-  padding: 15px;
-  }
-  .toggle,
-  .user,
-  .search {
-  /* order: 1;
-  font-size: 20px;
-  margin-left: 15px;
-  }
-
-  .user-menu li a {
-  display: block;
-  padding: 15px 5px;
-  }
-  .item.button {
-  order: 2;
-  }
-  .item {
-  order: 3;
-  width: 100%;
-  text-align: center;
-  display: none;
-  }
-  .active .item {
-  display: block;
-  }
-  .button.secondary {
-  /* divider between buttons and menu links
-  border-bottom: 1px #444 solid;
-  }
-  .fas {
-  color: #fafafa;
-  }
-
-  /* Submenu up from mobile screens
-  .submenu {
-  display: none;
-  }
-  .submenu-active .submenu {
-  display: block;
-  }
-  .has-submenu i {
-  font-size: 12px;
-  }
-  .has-submenu > a::after {
-  font-family: "Font Awesome 5 Free";
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 900;
-  content: "\f078";
-  color: white;
-  padding-left: 5px;
-  }
-  .subitem a {
-  padding: 10px 15px;
-  }
-  .submenu-active {
-  background-color: #111;
-  border-radius: 3px;
-  }
-
-  /* Tablet menu
-  @media all and (min-width: 700px) {
-  .menu {
-  justify-content: center;
-  }
-  .logo {
-  flex: 1;
-  }
-  .item.button {
-  width: auto;
-  order: 1;
-  display: block;
-  }
-  .toggle {
-  flex: 1;
-  text-align: right;
-  order: 2;
-  }
-  /* Button up from tablet screen
-  .menu li.button a {
-  padding: 10px 15px;
-  margin: 5px 0;
-  }
-  .button a {
-  background: #0080ff;
-  border: 1px royalblue solid;
-  }
-  .button.secondary {
-  border: 0;
-  }
-  .button.secondary a {
-  background: transparent;
-  border: 1px #0080ff solid;
-  }
-  .button a:hover {
-  text-decoration: none;
-  }
-  .button:not(.secondary) a:hover {
-  background: royalblue;
-  border-color: darkblue;
-  }
-  }
-
-  Desktop menu
-  @media all and (min-width: 960px) {
-  .menu {
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  background: none;
-  }
-  .logo {
-  order: 0;
-  }
-  .item {
-  order: 1;
-  position: relative;
-  display: block;
-  width: auto;
-  }
-  .button {
-  order: 2;
-  }
-  .submenu-active .submenu {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 68px;
-  background: #111;
-  }
-  .toggle {
-  display: none;
-  }
-  .submenu-active {
-  border-radius: 0;
-  }
-  } */
+/* COLUMNS */
 
 .col-1 {
   width: 8.33%;
@@ -688,110 +431,10 @@ footer {
   width: 100%;
 }
 
-/* 
 
 
-.mySlides {
-  display: none;
-  height: fit-content;
-}
 
-
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-
-.dot {
-  cursor: pointer;
-  height: 10px;
-  width: 10px;
-  margin: 0 1px;
-  background-color: #a6ae9c;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-  background-color: #901729;
-} 
-
-.slideshow {
-  width: 100%;
-  object-fit: cover;
-}
-
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-} */
+/* CARDS */
 
 .header {
   font-family: "Rochester", cursive;
@@ -823,7 +466,7 @@ footer {
   opacity: 85%;
 }
 
-/* Add some padding inside the card container */
+
 .card-container {
   padding: 2px 10px;
   text-align: center;
@@ -862,9 +505,6 @@ footer {
   margin-top: 11px;
 }
 
-/* .user:first-child {
-  margin-right: 20px;
-} */
 
 .user img {
   border-radius: 50%;
@@ -878,7 +518,10 @@ footer {
   align-items: center;
 }
 
-/*Uusi slideshow*/
+
+
+
+/* SLIDESHOW */
 
 .slideshow-container {
   max-width: 100%;
