@@ -233,7 +233,8 @@ main {
 }
 
 .center {
-  width: 400px;
+  width: 90vw;
+  padding: 10px;
   background: #e7e7e7;
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
@@ -332,7 +333,7 @@ input[type="submit"]:hover {
   margin: 5px;
 }
 
-/* Profile page */
+/* PROFILE */
 
 .container {
   display: flex;
@@ -367,7 +368,7 @@ input[type="submit"]:hover {
   margin-top: 100px;
 }
 
-/* Item Section */
+/* Item Section Profile */
 
 .profile-container {
   display: flex;
@@ -416,18 +417,6 @@ input[type="submit"]:hover {
 .item__logout a {
   color: #303030;
 }
-
-/* .dropdownContent a {
-  color: #fafafa;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  }
-/*
-  /* Change color of dropdown links on hover
-  .dropdownContent a:hover {background-color: #ddd;}
-
-
 
 /* FOOTER */
 
@@ -698,7 +687,6 @@ footer {
   float: right;
 }
 
-
 /* RECIPE PAGE */
 
 .recipe-header-img {
@@ -721,7 +709,6 @@ footer {
   justify-content: space-between;
   margin: 0 0.5rem;
 }
-
 
 .recipe-name h2 {
   font-family: "Quicksand", sans-serif;
@@ -771,7 +758,8 @@ footer {
   margin: 0 1rem;
 }
 
-.recipe-steps, .recipe-ingredients {
+.recipe-steps,
+.recipe-ingredients {
   margin: 0 2.5rem;
 }
 
@@ -788,7 +776,6 @@ footer {
   margin-top: 1rem;
 }
 
-
 .recipe-ingredients ul li {
   padding: 0.5em;
 }
@@ -800,7 +787,55 @@ footer {
   width: 96%;
   padding-bottom: 20px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
 
+/* ADD RECIPE */
+
+.recipe-includes {
+  display: grid;
+  grid-template-columns: 10% 10% 50% 10%;
+  grid-column-gap: 15px;
+}
+.add-recipe-steps {
+  display: grid;
+  grid-template-columns: 10% 60% 10%;
+  grid-column-gap: 15px;
+  height: 100px;
+}
+
+.add-more,
+.recipe-info {
+  margin: 10px 0 10px 0;
+}
+
+.recipe-guide {
+  padding-bottom: 10px;
+  font-size: 1em;
+}
+
+.step {
+  height: 30px;
+}
+
+#recipe-input {
+  border: 1 solid red;
+}
+
+#recipebtn {
+  width: 60px;
+  height: 30px;
+  border: 1px solid;
+  background: #187200;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+#recipebtn:hover {
+  border-color: #187200;
+  transition: 0.5s;
 }
 
 /*
