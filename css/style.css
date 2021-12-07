@@ -378,7 +378,7 @@ input[type="submit"]:hover {
 .profile-container a {
   color: #303030;
 }
-.item {
+.profile-item {
   padding: 10px;
   margin-top: 50px;
   margin: 10px;
@@ -393,7 +393,7 @@ input[type="submit"]:hover {
   padding-left: 20px;
 }
 
-.item span {
+.profile-item span {
   font-style: normal;
   font-weight: 550;
   padding: 8px;
