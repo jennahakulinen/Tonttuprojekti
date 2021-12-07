@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etusivu</title>
+    <title>Oma profiili</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,56 +77,64 @@
         </header>
 
 
-        <main class="main-login">
+        <div class="container">
             <div class="center">
-                <h1 class="header">Kirjaudu sisään</h1>
-                <form method="post">
-                    <div class="txt_field">
-                        <input type="text" name="username" required>
-                        <span></span>
-                        <label>Käyttäjätunnus</label>
+                <div class="img__profile">
+                    <img src="img/santa-claus.png" alt="profile">
+                    
+                </div>
+
+                <div class="name">Joulupukki</div>
+
+                <div class="profile-container">
+                    <div class="item">
+                        <i class="fas fa-user pro"></i>
+                        <span>Omat tiedot</span>
+                        <a href="#"><i class="fas fa-chevron-right end"></i></a>   
                     </div>
-                    <div class="txt_field">
-                        <input type="password" name="password" required>
-                        <span></span>
-                        <label>Salasana</label>
+                    <div class="item">
+                        <i class="fas fa-candy-cane pro"></i>
+                        <span>Omat reseptit</span>
+                        <a href="#"><i class="fas fa-chevron-right end"></i></a>
                     </div>
-                    <input type="submit" value="Kirjaudu">
-                    <div class="signup_link">
-                        Uusi käyttäjä? <a href="register.html">Rekisteröidy tästä</a>
+                    <div class="item">
+                        <i class="fas fa-heart pro"></i>
+                        <span>Suosikit</span>
+                        <a href="#"><i class="fas fa-chevron-right end"></i></a>
                     </div>
-                </form>
+                </div>
+                <div class="item__logout">
+                    <span>Kirjaudu ulos</span>
+                    <a href="#"><i class="fas fa-sign-out-alt"></i></a>
+                </div>
             </div>
-        </main>
+        </div>
+    </div>
+<footer>
+    <div class="footer-content">
+        <div class="footer-info">
+            <div class="footer-logo">
+                <a href="etusivu.html"><img class="logo-img-footer" src="img/logo_blacknwhite.svg" alt="logo"></a>
+            </div>
+            <div class="footer-contact">
+                <a href="#">cookmas@contact.com</a>
+            </div>
+        </div>
+        <div class="footer-social">
+            <div class="fb"><i class="fab fa-facebook fa-2x"></i></div>
+            <div class="tw"><i class="fab fa-twitter fa-2x"></i></div>
+            <div class="ig"><i class="fab fa-instagram fa-2x"></i></div>
+        </div>
+
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <div class="footer-logo">
-                    <a href="etusivu.html"><img class="logo-img-footer" src="img/logo_blacknwhite.svg" alt="logo"></a>
-                </div>
-                <div class="footer-contact">
-                    <a href="#">cookmas@contact.com</a>
-                </div>
-            </div>
-            <div class="footer-social">
-                <div class="fb"><i class="fab fa-facebook fa-2x"></i></div>
-                <div class="tw"><i class="fab fa-twitter fa-2x"></i></div>
-                <div class="ig"><i class="fab fa-instagram fa-2x"></i></div>
-            </div>
+    <div class="footer-bottom">
+        &copy; Tontut
+    </div>
+</footer>
 
-        </div>
-
-        <div class="footer-bottom">
-            &copy; Tontut
-        </div>
-    </footer>
-
-
-
-    <script src="js/script.js"></script>
-    <script src="js/slideshow.js"></script>
+<script src="js/script.js"></script>
+<script src="js/slideshow.js"></script>
 
 </body>
 
