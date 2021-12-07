@@ -636,7 +636,7 @@ footer {
   object-fit: cover;
   position: relative;
   border-radius: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
 }
 
 .recipe-header {
@@ -692,15 +692,16 @@ footer {
 
 .recipe-h {
   text-align: left;
-  margin: 0 0.5rem;
+  margin: 0 1rem;
 }
 
 .recipe-steps, .recipe-ingredients {
-  margin: 0 2rem;
+  margin: 0 2.5rem;
 }
 
 .recipe-steps ul li {
   padding: 0.5em;
+  list-style-type: circle;
 }
 
 .re-hr {
@@ -714,6 +715,16 @@ footer {
 
 .recipe-ingredients ul li {
   padding: 0.5em;
+}
+
+.recipe-container {
+  background-color: #e7e7e7;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  width: 96%;
+  padding-bottom: 20px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+
 }
 
 /*
