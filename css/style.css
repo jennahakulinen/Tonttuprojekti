@@ -378,7 +378,7 @@ input[type="submit"]:hover {
 .profile-container a {
   color: #303030;
 }
-.item {
+.profile-item {
   padding: 10px;
   margin-top: 50px;
   margin: 10px;
@@ -393,7 +393,7 @@ input[type="submit"]:hover {
   padding-left: 20px;
 }
 
-.item span {
+.profile-item span {
   font-style: normal;
   font-weight: 550;
   padding: 8px;
@@ -696,6 +696,111 @@ footer {
 
 .button-container .button:nth-child(2) {
   float: right;
+}
+
+
+/* RECIPE PAGE */
+
+.recipe-header-img {
+  margin: 0 10px;
+  /* border-bottom: 1px solid #c30f16; */
+}
+
+.recipe-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+}
+
+.recipe-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0.5rem;
+}
+
+
+.recipe-name h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1em;
+  margin: 0.5rem 1rem 0.5rem 0.5rem;
+}
+
+.rate {
+  color: #303030;
+  font-size: 1em;
+}
+
+.rates:hover > .rate:before {
+  color: #187200;
+  cursor: pointer;
+}
+
+.rates > .rate:hover ~ .rate:before {
+  color: #303030;
+}
+
+.recipe-user {
+  display: flex;
+}
+
+.recipe-username {
+  font-size: 0.7em;
+  margin-top: 11px;
+}
+
+.recipe-user img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+}
+
+.recipe-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.recipe-h {
+  text-align: left;
+  margin: 0 1rem;
+}
+
+.recipe-steps, .recipe-ingredients {
+  margin: 0 2.5rem;
+}
+
+.recipe-steps ul li {
+  padding: 0.5em;
+  list-style-type: circle;
+}
+
+.re-hr {
+  border: 0;
+  height: 1px;
+  background: #c30f16;
+  background-image: linear-gradient(to right, #fafafa, #c30f16, #fafafa);
+  margin-top: 1rem;
+}
+
+
+.recipe-ingredients ul li {
+  padding: 0.5em;
+}
+
+.recipe-container {
+  background-color: #e7e7e7;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  width: 96%;
+  padding-bottom: 20px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+
 }
 
 /*
