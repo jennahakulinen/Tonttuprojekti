@@ -172,7 +172,7 @@ main {
   visibility: hidden;
   top: 1rem;
   left: 0.625rem;
-  width: 79%;
+  width: 80%;
   height: 3.5rem;
   z-index: 500;
 }
@@ -210,6 +210,7 @@ main {
   border: none;
   border-radius: 50%;
   background-color: #187200;
+  cursor: pointer;
 }
 
 .search-icon {
@@ -522,6 +523,11 @@ footer {
   overflow: hidden;
 }
 
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .card-title {
   padding: 2px;
 }
@@ -690,7 +696,7 @@ footer {
 /* RECIPE PAGE */
 
 .recipe-header-img {
-  margin: 0 10px;
+  margin: 10px 10px 0 10px;
   /* border-bottom: 1px solid #c30f16; */
 }
 
@@ -732,6 +738,11 @@ footer {
 
 .recipe-user {
   display: flex;
+}
+
+.recipe-user a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .recipe-username {
@@ -776,8 +787,66 @@ footer {
   margin-top: 1rem;
 }
 
-.recipe-ingredients ul li {
-  padding: 0.5em;
+/* .recipe-ingredients {
+  display: grid;
+  grid-template-columns: 5% 10% 80%;
+} */
+
+.recipe-grid-container {
+  display: grid;
+  grid-template-columns: 5% 15% 80%;
+  list-style: none;
+}
+
+.recipe-grid {
+  padding-left: 0.5em;
+}
+
+.recipe-cookingtime {
+  position: relative;
+  margin: 1rem 3rem;
+}
+
+.recipe-cookingtime p {
+  position: absolute;
+  bottom: 3px;
+  left: 30px;
+}
+
+.cooktime {
+  font-size: 1.5em;
+}
+
+.recipe-addfav {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  text-align: center;
+  background-color: #fafafa;
+  border-style: none;
+  border-radius: 50%;
+  z-index: 600;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+}
+
+.recipe-emptyfav {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  color: #c30f16;
+  font-size: 1.5em;
+}
+
+.recipe-fav {
+  visibility: hidden;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  color: #c30f16;
+  font-size: 1.5em;
 }
 
 .recipe-container {
@@ -787,6 +856,22 @@ footer {
   width: 96%;
   padding-bottom: 20px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.recipe-categories {
+  margin: 10px;
+  display: flex;
+}
+
+.recipe-cat-item {
+  background-color: #BEA6A1;
+  width: fit-content;
+  border-radius: 20px;
+  font-size: 0.75em;
+  text-align: center;
+  padding: 8px;
+  margin: 0 2px;
+  cursor: pointer;
 }
 
 /* ADD RECIPE */
