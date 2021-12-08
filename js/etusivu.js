@@ -104,7 +104,7 @@ const recipeArray = [
     },
     {
         filename: 'img/image11.jpg',
-        title: 'Paistettu kalkkuna',
+        title: 'Paistettu kalkkuna sitruunalla',
         user: 'ChristmasSpirit',
         profilepic: 'https://lh3.googleusercontent.com/ogw/ADGmqu8sn9zF15pW59JIYiLgx3PQ3EyZLFp5Zqao906l=s32-c-mo',
         rates: '5/5',
