@@ -303,17 +303,19 @@ form .txt_field {
 input[type="submit"] {
   width: 100%;
   height: 50px;
-  border: 1px solid;
+  border: 1px solid #003700;
   background: #187200;
-  border-radius: 25px;
+  border-radius: 8px;
   font-size: 18px;
-  color: #e9f4fb;
-  font-weight: 700;
+  font-family: "Quicksand", sans-serif;
+  color: #003700;
   cursor: pointer;
   outline: none;
 }
 input[type="submit"]:hover {
-  border-color: #187200;
+  background: #c30f16;
+  color: #fafafa;
+  border-color: #c30f16;
   transition: 0.5s;
 }
 .signup_link {
@@ -864,7 +866,7 @@ footer {
 }
 
 .recipe-cat-item {
-  background-color: #BEA6A1;
+  background-color: #bea6a1;
   width: fit-content;
   border-radius: 20px;
   font-size: 0.75em;
@@ -881,6 +883,15 @@ footer {
   grid-template-columns: 10% 10% 50% 10%;
   grid-column-gap: 15px;
 }
+
+.add-recipe-header {
+  display: grid;
+  grid-template-columns: 80%;
+  grid-column-gap: 15px;
+  border-bottom: 1px solid silver;
+  padding: 20px 0;
+}
+
 .add-recipe-steps {
   display: grid;
   grid-template-columns: 10% 60% 10%;
@@ -908,9 +919,18 @@ footer {
   grid-column-gap: 15px;
 }
 
+.add-recipe-picture {
+  margin: 20px;
+}
 .add-more {
   border-bottom: 1px solid silver;
   padding: 20px 0;
+}
+
+.addButton {
+  border-style: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .recipe-info {
@@ -927,27 +947,9 @@ footer {
 }
 
 #recipe-input {
+  height: 30px;
   border: 1px solid silver;
   font-family: "Quicksand", sans-serif;
-}
-
-#recipebtn {
-  width: 60px;
-  height: 30px;
-  border: 1px solid #003700;
-  background: #187200;
-  border-radius: 8px;
-  font-size: 18px;
-  font-family: "Quicksand", sans-serif;
-  color: #003700;
-  cursor: pointer;
-  outline: none;
-}
-#recipebtn:hover {
-  background: #c30f16;
-  color: #fafafa;
-  border-color: #c30f16;
-  transition: 0.5s;
 }
 
 /*
