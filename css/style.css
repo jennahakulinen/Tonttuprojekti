@@ -882,6 +882,7 @@ footer {
   display: grid;
   grid-template-columns: 10% 10% 50% 10%;
   grid-column-gap: 15px;
+  padding: 20px 0 0 0;
 }
 
 .add-recipe-header {
@@ -896,6 +897,7 @@ footer {
   display: grid;
   grid-template-columns: 10% 60% 10%;
   grid-column-gap: 15px;
+  padding: 20px 0 0 0;
 }
 
 .resizable {
@@ -917,6 +919,7 @@ footer {
   display: grid;
   grid-template-columns: 20% 10%;
   grid-column-gap: 15px;
+  padding: 20px 0 0 0;
 }
 
 .add-recipe-picture {
@@ -931,6 +934,7 @@ footer {
   border-style: none;
   font-size: 1.5rem;
   cursor: pointer;
+  background-color: #e7e7e7;
 }
 
 .recipe-info {
@@ -946,8 +950,13 @@ footer {
   height: 30px;
 }
 
+.addMore-includes {
+  padding: 20px 0 0 0;
+}
+
 #recipe-input {
   height: 30px;
+  padding: 0 0 0 5px;
   border: 1px solid silver;
   font-family: "Quicksand", sans-serif;
 }
