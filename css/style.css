@@ -885,10 +885,34 @@ footer {
   display: grid;
   grid-template-columns: 10% 60% 10%;
   grid-column-gap: 15px;
-  height: 100px;
 }
 
-.add-more,
+.resizable {
+  resize: vertical;
+  overflow: visible;
+  min-height: 30px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.add-recipe-cooktime {
+  display: grid;
+  grid-template-columns: 20% 10%;
+  grid-column-gap: 15px;
+  border-bottom: 1px solid silver;
+  padding: 20px 0;
+}
+
+.add-recipe-category {
+  display: grid;
+  grid-template-columns: 20% 10%;
+  grid-column-gap: 15px;
+}
+
+.add-more {
+  border-bottom: 1px solid silver;
+  padding: 20px 0;
+}
+
 .recipe-info {
   margin: 10px 0 10px 0;
 }
@@ -903,23 +927,26 @@ footer {
 }
 
 #recipe-input {
-  border: 1 solid red;
+  border: 1px solid silver;
+  font-family: "Quicksand", sans-serif;
 }
 
 #recipebtn {
   width: 60px;
   height: 30px;
-  border: 1px solid;
+  border: 1px solid #003700;
   background: #187200;
   border-radius: 8px;
   font-size: 18px;
-  color: #e9f4fb;
-  font-weight: 700;
+  font-family: "Quicksand", sans-serif;
+  color: #003700;
   cursor: pointer;
   outline: none;
 }
 #recipebtn:hover {
-  border-color: #187200;
+  background: #c30f16;
+  color: #fafafa;
+  border-color: #c30f16;
   transition: 0.5s;
 }
 

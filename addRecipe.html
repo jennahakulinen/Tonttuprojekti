@@ -80,14 +80,15 @@
                 <div class="header">
                     <h1>Lisää resepti</h1>
                 </div>
-                <div class="recipe-info">
+                <form action="http://localhost:3000/recipe" method="post"
+                enctype="multipart/form-data" id="addRecipeForm" class="recipe-info">
                     <div class="recipe-guide">
                         <h3>Lisää ainesosat</h3>
                     </div>
                     <div class="recipe-includes">
                         <input type="number" id="recipe-input" name="quantity" min="1" placeholder="2">
-                        <input type="text" name="unit" max="3" placeholder="dl">
-                        <input type="text" name="ingredient" placeholder="sokeri">
+                        <input type="text" id="recipe-input" name="unit" max="3" placeholder="dl">
+                        <input type="text" id="recipe-input" name="ingredient" placeholder="sokeri">
                         <input type="submit" id="recipebtn" value="Lisää">
                     </div>
                     <div class="add-more">
@@ -96,14 +97,13 @@
                         </div>
                         <i class="fas fa-plus-circle"></i>
                     </div>
-                </div> 
-                <div class="recipe-info">
+                
                     <div class="recipe-guide">
                         <h3>Lisää ohjeet</h3>
                     </div>
                     <div class="add-recipe-steps">
-                        <input type="number" name="step" min="1" placeholder="1" class="step">
-                        <input type="text" name="description" placeholder="Laita uuni päälle">
+                        <input type="number" class="step" id="recipe-input" name="step" min="1" placeholder="1.">
+                        <textarea name="description" class="resizable" id="recipe-input" placeholder="Laita uuni päälle"></textarea>
                         <input type="submit" id="recipebtn" value="Lisää">
                     </div>
                     <div class="add-more">
@@ -112,43 +112,64 @@
                         </div>
                         <i class="fas fa-plus-circle"></i>
                     </div>
-                </div>
-                <div class="recipe-info">
+
+                    <div class="recipe-guide">
+                        <h3>Lisää valmistusaika</h3>
+                    </div>
+                    <div class="add-recipe-cooktime">
+                        <input type="number" id="recipe-input" name="step" min="1" placeholder="min" class="step">
+                        <input type="submit" id="recipebtn" value="Lisää">
+                    </div>
+                
+                    <div class="recipe-guide">
+                        <h3>Lisää kategoriat</h3>
+                    </div>
+                    <div class="add-recipe-category">
+                        <input type="text" id="recipe-input" name="category" placeholder="Leivonta" class="category">
+                        <input type="submit" id="recipebtn" value="Lisää">
+                    </div>
+                    <div class="add-more">
+                        <div class="recipe-guide">
+                            <p>Uusi kategoria</p>
+                        </div>
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                
                     <div class="recipe-guide">
                         <h3>Lisää kuva</h3>
                     </div>
                     <div class="add-recipe-picture">
                         <input type="file" name="picture">
                     </div>
-            </div>
-        </main>
-    </div>
-    
-    <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <div class="footer-logo">
-                    <a href="etusivu.html"><img class="logo-img-footer" src="img/logo_blacknwhite.svg" alt="logo"></a>
-                </div>
-                <div class="footer-contact">
-                    <a href="#">cookmas@contact.com</a>
-                </div>
-            </div>
-            <div class="footer-social">
-                <div class="fb"><i class="fab fa-facebook fa-2x"></i></div>
-                <div class="tw"><i class="fab fa-twitter fa-2x"></i></div>
-                <div class="ig"><i class="fab fa-instagram fa-2x"></i></div>
-            </div>
-
+                </form>
+            </main>
         </div>
 
-        <div class="footer-bottom">
-            &copy; Tontut
-        </div>
-    </footer>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <a href="etusivu.html"><img class="logo-img-footer" src="img/logo_blacknwhite.svg" alt="logo"></a>
+                    </div>
+                    <div class="footer-contact">
+                        <a href="#">cookmas@contact.com</a>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <div class="fb"><i class="fab fa-facebook fa-2x"></i></div>
+                    <div class="tw"><i class="fab fa-twitter fa-2x"></i></div>
+                    <div class="ig"><i class="fab fa-instagram fa-2x"></i></div>
+                </div>
 
-    <script src="js/script.js"></script>
+            </div>
 
-</body>
+            <div class="footer-bottom">
+                &copy; Tontut
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
+
+    </body>
 
 </html>
