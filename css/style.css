@@ -532,6 +532,7 @@ footer {
 
 .card-title {
   padding: 2px;
+  font-size: 0.95em;
 }
 
 .fa-candy-cane {
@@ -776,9 +777,8 @@ footer {
   margin: 0 2.5rem;
 }
 
-.recipe-steps ul li {
+.recipe-steps ol li {
   padding: 0.5em;
-  list-style-type: circle;
 }
 
 .re-hr {
@@ -863,6 +863,7 @@ footer {
 .recipe-categories {
   margin: 10px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .recipe-cat-item {
@@ -872,7 +873,7 @@ footer {
   font-size: 0.75em;
   text-align: center;
   padding: 8px;
-  margin: 0 2px;
+  margin: 2px;
   cursor: pointer;
 }
 

@@ -86,15 +86,15 @@ dropdownBtn.onclick = () => {
 
 // Favorite-nappi reseptisivulla
 
-const likeBtn = document.querySelector(".recipe-addfav");
-const emptyHeart = document.querySelector(".recipe-emptyfav");
-const heart = document.querySelector(".recipe-fav");
+// const likeBtn = document.querySelector(".recipe-addfav");
+// const emptyHeart = document.querySelector(".recipe-emptyfav");
+// const heart = document.querySelector(".recipe-fav");
 
-likeBtn.onclick = () => {
-  if (heart.style.visibility === "visible") {
-    heart.style.visibility = "hidden";
-  } else {
-    heart.style.visibility = "visible";
-  }
-}
+// likeBtn.onclick = () => {
+//   if (heart.style.visibility === "visible") {
+//     heart.style.visibility = "hidden";
+//   } else {
+//     heart.style.visibility = "visible";
+//   }
+// }
 
