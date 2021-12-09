@@ -7,13 +7,51 @@ const recipeStuff = [
         user: 'BestCook',
         profilepic: 'https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo',
         rates: '4/5',
-        ingredients: 'blabla',
-        steps: 'blabla',
         cooktime: '30',
     },
 ];
 
-const categoryStuff = ["Vegaaninen joulu", "Leivonta", "Jälkiruoka", "Jouluinen", "Herkku"];
+const categoryStuff = ["Leivonta", "Jälkiruoka", "Jouluinen", "Herkku"];
+
+const ingredientStuff = [
+    {
+        count: '1',
+        unit: 'dl',
+        name: 'sokeri',
+    },
+    {
+        count: '4',
+        unit: 'dl',
+        name: 'jauhot',
+    },
+    {
+        count: '1',
+        unit: 'rkl',
+        name: 'leivinjauhe',
+    },
+    {
+        count: '3',
+        unit: 'kpl',
+        name: 'kananmuna',
+    },
+    {
+        count: '6',
+        unit: 'dl',
+        name: 'maito',
+    },
+];
+
+const stepsStuff = [
+    {
+        desc: 'Vatkaa munien rakenne rikki kulhossa. Lisää taikinaan n. 2 dl maitoa ja muut aineet ja vatkaa tasaiseksi. Lisää loppu maito ja sekoita. Anna turvota 30 min.',
+    },
+    {
+        desc: 'Paista taikinasta ohukaisia Oivariini rasvassa pannulla.',
+    },
+    {
+        desc: 'Tarjoa lisänä esim. kermavaahtoa, marjoja, sokeria, hilloa, sokeroitua marjasurvosta tai jäätelöä.',
+    },
+];
 
 const recipebasis = document.querySelector('.recipebasis');
 
@@ -72,12 +110,6 @@ const getRecipe = () => {
                 <h1 class="header recipe-h">Ainesosat</h1>
                 <div class="col-11 recipe-ingredients">
                     <ul class="recipe-grid-container">
-                        <li class="recipe-grid">2</li>
-                        <li class="recipe-grid">dl</li>
-                        <li class="recipe-grid">korppujauhoja</li>
-                        <li class="recipe-grid">1</li>
-                        <li class="recipe-grid">kpl</li>
-                        <li class="recipe-grid">sitruunaa</li>
                     </ul>
                 </div>
             </div>
@@ -85,19 +117,8 @@ const getRecipe = () => {
             <div class="col-12">
                 <h1 class="header recipe-h">Ohjeet</h1>
                 <div class="col-11 recipe-steps">
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, in. Repellat
-                            doloremque
-                            earum, vitae alias aliquam debitis laboriosam doloribus. Odio, libero? Doloribus
-                            asperiores
-                            sit
-                            eum nemo repellat aspernatur nisi fugiat?</li>
-                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi obcaecati odit itaque
-                            ipsam
-                            eos nisi quos ut quae ducimus sequi, facilis rerum beatae architecto nam pariatur
-                            numquam
-                            temporibus. Sapiente, sunt.</li>
-                    </ul>
+                    <ol class="step-list">
+                    </ol>
                 </div>
                 <div class="recipe-cookingtime">
                     <i class="far fa-clock cooktime"></i>
@@ -106,7 +127,25 @@ const getRecipe = () => {
             </div>
         </div>`;
 
+    const recipeIngredients = document.querySelector(".recipe-grid-container");
 
+    recipeIngredients.innerHTML = ``;
+
+    for (let i = 0; i < ingredientStuff.length; i++) {
+        recipeIngredients.innerHTML +=
+            `<li class="recipe-grid">${ingredientStuff[i].count}</li>
+            <li class="recipe-grid">${ingredientStuff[i].unit}</li>
+            <li class="recipe-grid">${ingredientStuff[i].name}</li>`;
+    }
+
+    const recipeSteps = document.querySelector(".step-list");
+
+    recipeSteps.innerHTML = ``;
+
+    for (let i = 0; i < stepsStuff.length; i++) {
+        recipeSteps.innerHTML +=
+            `<li>${stepsStuff[i].desc}</li>`;
+    }
 
 
     const likeBtn = document.querySelector(".recipe-addfav");
