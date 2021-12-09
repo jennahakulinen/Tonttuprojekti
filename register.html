@@ -20,24 +20,36 @@
         <header>
             <div class="navigation">
                 <div class="logo">
-                    <h1>Cookmas</h1>
+                    <a href="etusivu.html"><img class="logo-img" src="img/logo.svg" alt="logo"></a>
                 </div>
 
-                <div class="navigationButton searchBut">
+
+                <button class="navigationButton searchBut">
                     <i class="fas fa-search icon"></i>
+                </button>
+                <div class="search-box">
+                    <form class="search-form" action="">
+                        <input type="text" class="input-search" placeholder="Hae reseptejä">
+                        <button class="search-form-button">
+                            <i class="fas fa-search search-icon"></i>
+                        </button>
+                    </form>
                 </div>
-
-                <div class="navigationButton userBut">
-                    <a href="login.html"><i class="fas fa-user icon"></i></a>
-                </div>
-
-                <div class="navigationButton hamBut">
-                    <i class="fas fa-bars icon"></i>
-                </div>
-
-                <div class="navigationButton closeBut">
+                <button class="navigationButton closeSearchBut">
                     <i class="fas fa-times icon"></i>
-                </div>
+                </button>
+
+                <button class="navigationButton userBut">
+                    <a href="login.html"><i class="fas fa-user icon"></i></a>
+                </button>
+
+                <button class="navigationButton hamBut">
+                    <i class="fas fa-bars icon"></i>
+                </button>
+
+                <button class="navigationButton closeBut">
+                    <i class="fas fa-times icon menuclose"></i>
+                </button>
 
 
                 <nav class="navigationNav">
@@ -62,14 +74,49 @@
                     </ul>
                 </nav>
             </div>
-        </header>       
+        </header>
+
+        <main class="main-login">
+            <div class="center">
+                <h1 class="header">Rekisteröidy</h1>
+                <form id="add-user-form" method="post" action="http://localhost:3000/auth/register">
+                    <div class="txt_field">
+                        <input type="email" name="email" required>
+                        <span></span>
+                        <label>Sähköposti</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="text" name="username" required>
+                        <span></span>
+                        <label>Käyttäjätunnus</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="text" name="city" required>
+                        <span></span>
+                        <label>Kaupunki</label>
+                    </div>
+                    <div class="txt_field">
+                        <input type="password" name="password" required>
+                        <span></span>
+                        <label>Salasana</label>
+                    </div>
+                    <div class="txt_field">
+                        <form>
+                            <h4 id="profilepic">Profiilikuva</h4>
+                            <input type="file" id="myFile" name="filename">
+                        </form>
+                    </div>
+                    <input type="submit" value="Tallenna">
+                </form>
+            </div>
+        </main>
     </div>
 
     <footer>
         <div class="footer-content">
             <div class="footer-info">
                 <div class="footer-logo">
-                    <h1>Cookmas</h1>
+                    <a href="etusivu.html"><img class="logo-img-footer" src="img/logo_blacknwhite.svg" alt="logo"></a>
                 </div>
                 <div class="footer-contact">
                     <a href="#">cookmas@contact.com</a>
@@ -80,7 +127,7 @@
                 <div class="tw"><i class="fab fa-twitter fa-2x"></i></div>
                 <div class="ig"><i class="fab fa-instagram fa-2x"></i></div>
             </div>
-            
+
         </div>
 
         <div class="footer-bottom">
@@ -88,10 +135,10 @@
         </div>
     </footer>
 
-    
+
 
     <script src="js/script.js"></script>
-    <script src="js/slideshow.js"></script>
+    <script src="js/login.js"></script>
 
 </body>
 

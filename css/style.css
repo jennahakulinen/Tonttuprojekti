@@ -1,3 +1,5 @@
+/* BASIC STYLING */
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -31,54 +33,63 @@ main {
 
 .logo {
   position: absolute;
-  top: 1.6rem;
-  left: 1rem;
+  top: 0.8rem;
+  left: 0.8rem;
 }
+
+.logo-img {
+  width: 13rem;
+}
+
+.logo-img-footer {
+  width: 12rem;
+}
+
+/* NAVIGATION */
 
 .navigationButton {
   position: absolute;
   text-align: center;
   background-color: #c30f16;
+  border-style: none;
   border-radius: 50%;
   z-index: 300;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   cursor: pointer;
-  height: 4rem;
-  width: 4rem;
+  height: 3.5rem;
+  width: 3.5rem;
 }
 
 .closeBut {
-  top: 1rem;
-  right: 1rem;
+  top: 1.1rem;
+  right: 0.8rem;
   display: none;
   background-color: #fafafa;
 }
 
-.fa-times {
+.menuclose {
   color: #c30f16 !important;
 }
 
 .hamBut {
-  top: 1rem;
-  right: 1rem;
+  top: 1.1rem;
+  right: 0.8rem;
 }
 
 .searchBut {
-  top: 1rem;
-  right: 10rem;
+  top: 1.1rem;
+  right: 8.8rem;
+}
+
+.closeSearchBut {
+  top: 1.1rem;
+  right: 0.8rem;
+  display: none;
 }
 
 .userBut {
-  top: 1rem;
-  right: 5.5rem;
-}
-
-.icon {
-  position: relative;
-  top: 1.2rem;
-  text-align: center;
-  font-size: 1.5em;
-  color: #fafafa;
+  top: 1.1rem;
+  right: 4.8rem;
 }
 
 .navigationNav {
@@ -96,13 +107,7 @@ main {
   overflow: hidden;
 }
 
-/* .userNav.active {
-  right: 0;
-  overflow: hidden;
-} */
-
 .navigationList {
-  /*@include center;*/
   position: absolute;
   top: 50%;
   left: 50%;
@@ -110,6 +115,17 @@ main {
   text-align: center;
   width: 100%;
   list-style: none;
+}
+
+.navigationLink:link,
+.navigationLink:visited {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  color: #fafafa;
+  font-size: 2.4rem;
+  text-decoration: none;
+  transition: all 0.2s;
 }
 
 .dropdown {
@@ -149,15 +165,77 @@ main {
   cursor: pointer;
 }
 
-/* Login and register page */
+/* SEARCH */
+
+.search-box {
+  position: absolute;
+  visibility: hidden;
+  top: 1rem;
+  left: 0.625rem;
+  width: 80%;
+  height: 3.5rem;
+  z-index: 500;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-top: 0.25rem;
+  box-shadow: rgba(63, 63, 63, 0.2) 0px 2px 8px 0px;
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.input-search {
+  width: 90%;
+  height: 3rem;
+  flex-grow: 2;
+  border: none;
+  background-color: #fafafa;
+  font-size: 1em;
+  font-family: inherit;
+  padding-left: 10px;
+}
+
+.input-search:focus {
+  outline: none;
+}
+
+.search-form-button {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #187200;
+  cursor: pointer;
+}
+
+.search-icon {
+  color: #fafafa;
+}
+
+.icon {
+  position: relative;
+  top: 0;
+  text-align: center;
+  font-size: 1.5em;
+  color: #fafafa;
+}
+
+/* LOGIN AND REGISTER PAGE */
+
 .main-login {
   display: flex;
   justify-content: center;
-  padding-top: 20vh;
+  padding-top: 10vh;
 }
 
 .center {
-  width: 400px;
+  width: 90vw;
+  padding: 10px;
   background: #e7e7e7;
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
@@ -225,17 +303,19 @@ form .txt_field {
 input[type="submit"] {
   width: 100%;
   height: 50px;
-  border: 1px solid;
+  border: 1px solid #003700;
   background: #187200;
-  border-radius: 25px;
+  border-radius: 8px;
   font-size: 18px;
-  color: #e9f4fb;
-  font-weight: 700;
+  font-family: "Quicksand", sans-serif;
+  color: #003700;
   cursor: pointer;
   outline: none;
 }
 input[type="submit"]:hover {
-  border-color: #187200;
+  background: #c30f16;
+  color: #fafafa;
+  border-color: #c30f16;
   transition: 0.5s;
 }
 .signup_link {
@@ -252,35 +332,99 @@ input[type="submit"]:hover {
   text-decoration: underline;
 }
 
-/* .dropdownContent a {
-  color: #fafafa;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  } */
-/*
-  /* Change color of dropdown links on hover
-  .dropdownContent a:hover {background-color: #ddd;}
-
-  /* Show the dropdown menu on hover
-  .dropdown:hover .dropdownContent {display: block;}
-
-  /* Change the background color of the dropdown button when the dropdown content is shown
-  .dropdown:hover .dropBut {background-color: #3e8e41;} */
-
-.navigationLink:link,
-.navigationLink:visited {
-  display: inline-block;
-  padding: 1rem 2rem;
-  text-transform: uppercase;
-  color: #fafafa;
-  font-size: 2.4rem;
-  text-decoration: none;
-  transition: all 0.2s;
+#profilepic {
+  margin: 5px;
 }
 
+/* PROFILE */
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.img__profile {
+  display: grid;
+  position: relative;
+  margin-top: 100px;
+}
+
+.img__profile img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 200px;
+  box-shadow: 0px 40px 40px rgba(195, 15, 22, 0.16);
+}
+
+.name {
+  font-size: 1.2em;
+  line-height: 3em;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 100px;
+}
+
+/* Item Section Profile */
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.profile-container a {
+  color: #303030;
+}
+.profile-item {
+  padding: 10px;
+  margin-top: 50px;
+  margin: 10px;
+}
+
+.pro {
+  padding-right: 15px;
+  color: black !important;
+}
+
+.end {
+  padding-left: 20px;
+}
+
+.profile-item span {
+  font-style: normal;
+  font-weight: 550;
+  padding: 8px;
+  line-height: 16px;
+}
+
+.item__logout {
+  display: flex;
+  justify-content: center;
+  margin: 5rem !important;
+}
+
+.item__logout span {
+  font-style: normal;
+  font-weight: 550;
+  padding-right: 20px;
+  line-height: 16px;
+}
+
+.item__logout a {
+  color: #303030;
+}
+
+/* FOOTER */
+
 footer {
-  height: 200px;
+  height: 210px;
   background-color: #187200;
   color: #303030;
   position: relative;
@@ -304,7 +448,7 @@ footer {
 }
 
 .footer-contact {
-  padding: 10px;
+  padding: 0 10px 10px 10px;
 }
 
 .footer-contact a {
@@ -324,320 +468,7 @@ footer {
   padding-right: 10px;
 }
 
-/*  */
-
-/*
-  .navigationItem {
-  margin: 1rem;
-  }
-
-  */
-
-/*
-  .navigation__link span {
-  margin-right: 1.5rem;
-  display: inline-block;
-  }
-
-  .navigationLink:hover {
-  color: #C1D0D0;
-  transform: scale(1.1);
-  }
-
-  .navigation__checkbox:checked~.navigation__background {
-  transform: scale(80)
-  }
-
-  .navigation__checkbox:checked~.navigation__nav {
-  width: 100%;
-  visibility: visible;
-  opacity: 1;
-  }
-
-  .navigation__icon {
-
-  position: relative;
-  margin-top: 2.5rem;
-  }
-
-  @media screen and (min-width: 768px) {
-  .navigation__icon {
-  margin-top: 3.5rem;
-  }
-  }
-
-
-
-  @media (min-width: 768px) {
-  .navigation__icon,
-  .navigation__icon::before,
-  .navigation__icon::after {
-  width: 3rem;
-  }
-  }
-  */
-
-/* .navigation__icon,
-  .navigation__icon::before,
-  .navigation__icon::after {
-  display: inline-block;
-  width: 2.2rem;
-  height: 2px;
-  background-color: #4A676A;
-  }
-
-  .navigation__icon::before,
-  .navigation__icon::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  transition: all 200ms;
-  }
-
-  .navigation__icon::before {
-  top: -.8rem;
-  }
-
-  .navigation__icon::after {
-  top: .8rem;
-  }
-
-  .navigation__button:hover .navigation__icon::before {
-  top: -1rem;
-  }
-
-  .navigation__button:hover .navigation__icon::after {
-  top: 1rem;
-  }
-
-
-  .navigation__checkbox:checked+.navigation__button .navigation__icon {
-  background-color: transparent;
-  }
-
-  .navigation__checkbox:checked+.navigation__button .navigation__icon::before {
-  top: 0;
-  transform: rotate(135deg);
-  }
-
-  .navigation__checkbox:checked+.navigation__button .navigation__icon::after {
-  top: 0;
-  transform: rotate(-135deg);
-  } */
-
-/*
-  light-blue: #C1D0D0;
-  dark-blue: #4A676A;
-  cream: #FFEAA5;
-  yellow: #FFB037;
-  */
-
-/* nav {
-  position: sticky;
-  width: 100%;
-  z-index: 1;
-  background: #C30F16;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  }
-  a {
-  color: white;
-  text-decoration: none;
-  }
-
-  .menu,
-  .user-menu {
-  position: absolute;
-  top: -15px;
-  }
-
-  .search {
-  position: absolute;
-  right: 30px;
-  }
-
-  .menu,
-  .submenu,
-  .user-menu,
-  .logo {
-  list-style-type: none;
-  }
-  .logo {
-  font-size: 20px;
-  padding: 7.5px 10px 7.5px 0;
-  align-self: center;
-  }
-  .item {
-  padding: 10px;
-  }
-  .item.button {
-  padding: 9px 5px;
-  }
-  .item:not(.button) a:hover,
-  .item a:hover::after {
-  color: #ccc;
-  }
-
-  Mobile menu
-  .left-container {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 50%;
-  }
-
-  .right-container {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 50%;
-  }
-
-  .menu li a {
-  display: block;
-  padding: 15px 5px;
-  }
-  .menu li.subitem a {
-  padding: 15px;
-  }
-  .toggle,
-  .user,
-  .search {
-  /* order: 1;
-  font-size: 20px;
-  margin-left: 15px;
-  }
-
-  .user-menu li a {
-  display: block;
-  padding: 15px 5px;
-  }
-  .item.button {
-  order: 2;
-  }
-  .item {
-  order: 3;
-  width: 100%;
-  text-align: center;
-  display: none;
-  }
-  .active .item {
-  display: block;
-  }
-  .button.secondary {
-  /* divider between buttons and menu links
-  border-bottom: 1px #444 solid;
-  }
-  .fas {
-  color: #fafafa;
-  }
-
-  /* Submenu up from mobile screens
-  .submenu {
-  display: none;
-  }
-  .submenu-active .submenu {
-  display: block;
-  }
-  .has-submenu i {
-  font-size: 12px;
-  }
-  .has-submenu > a::after {
-  font-family: "Font Awesome 5 Free";
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 900;
-  content: "\f078";
-  color: white;
-  padding-left: 5px;
-  }
-  .subitem a {
-  padding: 10px 15px;
-  }
-  .submenu-active {
-  background-color: #111;
-  border-radius: 3px;
-  }
-
-  /* Tablet menu
-  @media all and (min-width: 700px) {
-  .menu {
-  justify-content: center;
-  }
-  .logo {
-  flex: 1;
-  }
-  .item.button {
-  width: auto;
-  order: 1;
-  display: block;
-  }
-  .toggle {
-  flex: 1;
-  text-align: right;
-  order: 2;
-  }
-  /* Button up from tablet screen
-  .menu li.button a {
-  padding: 10px 15px;
-  margin: 5px 0;
-  }
-  .button a {
-  background: #0080ff;
-  border: 1px royalblue solid;
-  }
-  .button.secondary {
-  border: 0;
-  }
-  .button.secondary a {
-  background: transparent;
-  border: 1px #0080ff solid;
-  }
-  .button a:hover {
-  text-decoration: none;
-  }
-  .button:not(.secondary) a:hover {
-  background: royalblue;
-  border-color: darkblue;
-  }
-  }
-
-  Desktop menu
-  @media all and (min-width: 960px) {
-  .menu {
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  background: none;
-  }
-  .logo {
-  order: 0;
-  }
-  .item {
-  order: 1;
-  position: relative;
-  display: block;
-  width: auto;
-  }
-  .button {
-  order: 2;
-  }
-  .submenu-active .submenu {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 68px;
-  background: #111;
-  }
-  .toggle {
-  display: none;
-  }
-  .submenu-active {
-  border-radius: 0;
-  }
-  } */
+/* COLUMNS */
 
 .col-1 {
   width: 8.33%;
@@ -676,118 +507,7 @@ footer {
   width: 100%;
 }
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 100%;
-  position: relative;
-  margin: auto;
-  padding: 10px;
-  height: 18rem;
-  overflow: hidden;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-  height: fit-content;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 10px;
-  width: 10px;
-  margin: 0 1px;
-  background-color: #a6ae9c;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-/* .active,
-.dot:hover {
-  background-color: #901729;
-} */
-
-.slideshow {
-  width: 100%;
-  object-fit: cover;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
+/* CARDS */
 
 .header {
   font-family: "Rochester", cursive;
@@ -799,10 +519,15 @@ footer {
 .card {
   margin: 10px;
   width: calc(50% - 20px);
-  height: 280px;
+  height: 260px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-title {
@@ -811,14 +536,14 @@ footer {
 
 .fa-candy-cane {
   color: #187200;
-  margin-right: 2px;
+  margin-right: 3px;
+  margin-top: 3px;
 }
 
 .card-img:hover {
   opacity: 85%;
 }
 
-/* Add some padding inside the card container */
 .card-container {
   padding: 2px 10px;
   text-align: center;
@@ -841,7 +566,7 @@ footer {
 
 .card-img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -852,13 +577,10 @@ footer {
 }
 
 .username {
+  font-size: 0.7em;
   float: right;
-  margin-top: 10px;
+  margin-top: 11px;
 }
-
-/* .user:first-child {
-  margin-right: 20px;
-} */
 
 .user img {
   border-radius: 50%;
@@ -868,6 +590,375 @@ footer {
 }
 .user-info {
   display: flex;
+  font-size: 0.8em;
+  align-items: center;
+}
+
+/* SLIDESHOW */
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  padding: 10px;
+  height: 20rem;
+  overflow: hidden;
+}
+
+.items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+.items .item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  z-index: -1;
+  opacity: 0;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item.active {
+  opacity: 1;
+  z-index: 99;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.item.prev {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translate(-125%, -50%);
+}
+
+.item.next {
+  z-index: 2;
+  opacity: 0.25;
+  transform: translate(25%, -50%);
+}
+
+.items .button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  z-index: 100;
+}
+
+.button-container .button {
+  color: #fff;
+  font-size: 32px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.7;
+  transition: all 300ms ease-in-out;
+}
+
+.button-container .button:hover {
+  opacity: 1;
+}
+
+.button-container .button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: #187200;
+  border-radius: 50%;
+  z-index: -99;
+}
+
+.button-container .button:nth-child(1) {
+  float: left;
+}
+
+.button-container .button:nth-child(2) {
+  float: right;
+}
+
+/* RECIPE PAGE */
+
+.recipe-header-img {
+  margin: 10px 10px 0 10px;
+  /* border-bottom: 1px solid #c30f16; */
+}
+
+.recipe-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+}
+
+.recipe-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0.5rem;
+}
+
+.recipe-name h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1em;
+  margin: 0.5rem 1rem 0.5rem 0.5rem;
+}
+
+.rate {
+  color: #303030;
+  font-size: 1em;
+}
+
+.rates:hover > .rate:before {
+  color: #187200;
+  cursor: pointer;
+}
+
+.rates > .rate:hover ~ .rate:before {
+  color: #303030;
+}
+
+.recipe-user {
+  display: flex;
+}
+
+.recipe-user a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.recipe-username {
+  font-size: 0.7em;
+  margin-top: 11px;
+}
+
+.recipe-user img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+}
+
+.recipe-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+}
+
+.recipe-h {
+  text-align: left;
+  margin: 0 1rem;
+}
+
+.recipe-steps,
+.recipe-ingredients {
+  margin: 0 2.5rem;
+}
+
+.recipe-steps ul li {
+  padding: 0.5em;
+  list-style-type: circle;
+}
+
+.re-hr {
+  border: 0;
+  height: 1px;
+  background: #c30f16;
+  background-image: linear-gradient(to right, #fafafa, #c30f16, #fafafa);
+  margin-top: 1rem;
+}
+
+/* .recipe-ingredients {
+  display: grid;
+  grid-template-columns: 5% 10% 80%;
+} */
+
+.recipe-grid-container {
+  display: grid;
+  grid-template-columns: 5% 15% 80%;
+  list-style: none;
+}
+
+.recipe-grid {
+  padding-left: 0.5em;
+}
+
+.recipe-cookingtime {
+  position: relative;
+  margin: 1rem 3rem;
+}
+
+.recipe-cookingtime p {
+  position: absolute;
+  bottom: 3px;
+  left: 30px;
+}
+
+.cooktime {
+  font-size: 1.5em;
+}
+
+.recipe-addfav {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  text-align: center;
+  background-color: #fafafa;
+  border-style: none;
+  border-radius: 50%;
+  z-index: 600;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+}
+
+.recipe-emptyfav {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  color: #c30f16;
+  font-size: 1.5em;
+}
+
+.recipe-fav {
+  visibility: hidden;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  color: #c30f16;
+  font-size: 1.5em;
+}
+
+.recipe-container {
+  background-color: #e7e7e7;
+  margin: 1.5rem auto;
+  border-radius: 10px;
+  width: 96%;
+  padding-bottom: 20px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+}
+
+.recipe-categories {
+  margin: 10px;
+  display: flex;
+}
+
+.recipe-cat-item {
+  background-color: #bea6a1;
+  width: fit-content;
+  border-radius: 20px;
+  font-size: 0.75em;
+  text-align: center;
+  padding: 8px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+/* ADD RECIPE */
+
+.recipe-includes {
+  display: grid;
+  grid-template-columns: 10% 10% 50% 10%;
+  grid-column-gap: 15px;
+  padding: 20px 0 0 0;
+}
+
+.add-recipe-header {
+  display: grid;
+  grid-template-columns: 80%;
+  grid-column-gap: 15px;
+  border-bottom: 1px solid silver;
+  padding: 20px 0;
+}
+
+.add-recipe-steps {
+  display: grid;
+  grid-template-columns: 10% 60% 10%;
+  grid-column-gap: 15px;
+  padding: 20px 0 0 0;
+}
+
+.resizable {
+  resize: vertical;
+  overflow: visible;
+  min-height: 30px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.add-recipe-cooktime {
+  display: grid;
+  grid-template-columns: 20% 10%;
+  grid-column-gap: 15px;
+  border-bottom: 1px solid silver;
+  padding: 20px 0;
+}
+
+.add-recipe-category {
+  display: grid;
+  grid-template-columns: 20% 10%;
+  grid-column-gap: 15px;
+  padding: 20px 0 0 0;
+}
+
+.add-recipe-picture {
+  margin: 20px;
+}
+.add-more {
+  border-bottom: 1px solid silver;
+  padding: 20px 0;
+}
+
+.addButton {
+  border-style: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #e7e7e7;
+}
+
+.recipe-info {
+  margin: 10px 0 10px 0;
+}
+
+.recipe-guide {
+  padding-bottom: 10px;
+  font-size: 1em;
+}
+
+.step {
+  height: 30px;
+}
+
+.addMore-includes {
+  padding: 20px 0 0 0;
+}
+
+#recipe-input {
+  height: 30px;
+  padding: 0 0 0 5px;
+  border: 1px solid silver;
+  font-family: "Quicksand", sans-serif;
 }
 
 /*

@@ -76,25 +76,37 @@
             </div>
         </header>
 
-
         <main class="main-login">
             <div class="center">
-                <h1 class="header">Kirjaudu sisään</h1>
-                <form id="login-form" method="post" action="http://localhost:3000/auth/login">
+                <h1 class="header">Muokkaa tietoja</h1>
+                <form id="modUserForm">
+                    <div class="txt_field">
+                        <input type="email" name="email" required>
+                        <span></span>
+                        <label>Sähköposti</label>
+                    </div>
                     <div class="txt_field">
                         <input type="text" name="username" required>
                         <span></span>
                         <label>Käyttäjätunnus</label>
                     </div>
                     <div class="txt_field">
+                        <input type="text" name="city" required>
+                        <span></span>
+                        <label>Kaupunki</label>
+                    </div>
+                    <div class="txt_field">
                         <input type="password" name="password" required>
                         <span></span>
                         <label>Salasana</label>
                     </div>
-                    <input type="submit" value="Kirjaudu">
-                    <div class="signup_link">
-                        Uusi käyttäjä? <a href="register.html">Rekisteröidy tästä</a>
+                    <div class="txt_field">
+                        <form>
+                            <h4 id="profilepic">Profiilikuva</h4>
+                            <input type="file" id="myFile" name="filename">
+                        </form>
                     </div>
+                    <input type="submit" value="Tallenna">
                 </form>
             </div>
         </main>
@@ -126,7 +138,8 @@
 
 
     <script src="js/script.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/check-login.js"></script>
+    <script src="js/modify-user.js"></script>
 
 </body>
 

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etusivu</title>
+    <title>Oma profiili</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -77,29 +77,39 @@
         </header>
 
 
-        <main class="main-login">
+        <div class="container">
             <div class="center">
-                <h1 class="header">Kirjaudu sisään</h1>
-                <form id="login-form" method="post" action="http://localhost:3000/auth/login">
-                    <div class="txt_field">
-                        <input type="text" name="username" required>
-                        <span></span>
-                        <label>Käyttäjätunnus</label>
-                    </div>
-                    <div class="txt_field">
-                        <input type="password" name="password" required>
-                        <span></span>
-                        <label>Salasana</label>
-                    </div>
-                    <input type="submit" value="Kirjaudu">
-                    <div class="signup_link">
-                        Uusi käyttäjä? <a href="register.html">Rekisteröidy tästä</a>
-                    </div>
-                </form>
-            </div>
-        </main>
-    </div>
+                <div class="img__profile">
+                    <img src="img/santa-claus.png" alt="profile">
 
+                </div>
+
+                <div class="name">Joulupukki</div>
+
+                <div class="profile-container">
+                    <div class="profile-item">
+                        <i class="fas fa-user pro"></i>
+                        <span>Omat tiedot</span>
+                        <a href="modify-user.html"><i class="fas fa-chevron-right end"></i></a>
+                    </div>
+                    <div class="profile-item">
+                        <i class="fas fa-candy-cane pro"></i>
+                        <span>Omat reseptit</span>
+                        <a href="#"><i class="fas fa-chevron-right end"></i></a>
+                    </div>
+                    <div class="profile-item">
+                        <i class="fas fa-heart pro"></i>
+                        <span>Suosikit</span>
+                        <a href="#"><i class="fas fa-chevron-right end"></i></a>
+                    </div>
+                </div>
+                <div class="item__logout">
+                    <span>Kirjaudu ulos</span>
+                    <a href="login.html"><i class="fas fa-sign-out-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="footer-content">
             <div class="footer-info">
@@ -123,10 +133,8 @@
         </div>
     </footer>
 
-
-
     <script src="js/script.js"></script>
-    <script src="js/login.js"></script>
+    <script src="js/logout.js"></script>
 
 </body>
 
