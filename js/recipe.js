@@ -53,8 +53,8 @@ const stepsStuff = [
     },
 ];
 
-const recipebasis = document.querySelector('.recipebasis');
 
+const recipebasis = document.querySelector('.recipebasis');
 
 const getRecipe = () => {
     recipebasis.innerHTML = ``;
@@ -99,7 +99,7 @@ const getRecipe = () => {
 
     for (let i = 0; i < categoryStuff.length; i++) {
         recipeCategories.innerHTML +=
-            `<div class="recipe-cat-item">${categoryStuff[i]}</div>`;
+            `<button class="recipe-cat-item">${categoryStuff[i]}</button>`;
     }
 
     recipebasis.innerHTML +=
