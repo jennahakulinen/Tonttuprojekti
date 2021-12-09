@@ -23,7 +23,6 @@ addMoreBtnStep.onclick = () => {
     const addMoreStepHtml =
 
         `<div class="add-recipe-steps">
-        <input type="number" class="step" id="recipe-input" name="step" min="1" placeholder="1.">
         <textarea name="description" class="resizable" id="recipe-input" placeholder="Laita uuni päälle"></textarea>
         </div>`;
 
