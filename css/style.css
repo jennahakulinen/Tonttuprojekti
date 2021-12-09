@@ -871,10 +871,13 @@ footer {
   width: fit-content;
   border-radius: 20px;
   font-size: 0.75em;
+  color: inherit;
+  font-family: inherit;
   text-align: center;
   padding: 8px;
   margin: 2px;
   cursor: pointer;
+  border: none;
 }
 
 /* ADD RECIPE */
@@ -958,6 +961,19 @@ footer {
   padding: 0 0 0 5px;
   border: 1px solid silver;
   font-family: "Quicksand", sans-serif;
+}
+
+/* CATEGORY PAGE */
+
+.categories-page {
+  margin: auto;
+}
+
+.recipe-categories-page {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /*
