@@ -104,3 +104,31 @@ CREATE TABLE Favourites
   FOREIGN KEY (Username) REFERENCES Cookmas_User(Username),
   FOREIGN KEY (RecipeID) REFERENCES Recipe(RecipeID)
 );
+
+-- SQL- lauseet backendiä varten
+
+--Reseptin lisäys
+
+INSERT INTO Recipe (File, RecipeName, RecipeID, Description, CookTime, Username) 
+VALUES (?, ?, ?, ?, ?, ?);
+
+--Reseptin muokkaus
+
+UPDATE Recipe 
+SET 
+File = ?, RecipeName = ?, Description = ?, CookTime = ?, 
+WHERE RecipeID = ? AND Cookmas_User.Username = ?;
+
+--Käyttäjän lisäys
+
+INSERT INTO Cookmas_User (Username, email, password, Hometown, ProfilePic) 
+VALUES (?, ?, ?, ?);
+
+--Käyttäjän muokkaus
+
+UPDATE Cookmas_User
+SET
+Username = ?, email = ?, password = ?, Hometown = ?, ProfilePic = ?;
+
+
+

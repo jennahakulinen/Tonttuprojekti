@@ -898,16 +898,14 @@ footer {
 }
 
 .add-recipe-steps {
-  display: grid;
-  grid-template-columns: 10% 60% 10%;
-  grid-column-gap: 15px;
   padding: 20px 0 0 0;
 }
 
 .resizable {
   resize: vertical;
   overflow: visible;
-  min-height: 30px;
+  min-height: 100px;
+  width: 100%;
   font-family: "Quicksand", sans-serif;
 }
 

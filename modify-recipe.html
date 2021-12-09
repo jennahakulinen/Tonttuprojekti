@@ -78,14 +78,14 @@
         <main class="container">
             <div class="center">
                 <div class="header">
-                    <h1>Muokkaa reseptiä</h1>
+                    <h1>Lisää resepti</h1>
                 </div>
-                <form  id="modRecipeForm">
+                <form id="modRecipeForm">
                     <div class="recipe-guide">
                         <h3>Lisää otsikko</h3>
                     </div>
                     <div class="add-recipe-header">
-                        <input type="text" id="recipe-input" name="name" placeholder="Piparit">
+                        <input type="text" id="recipe-input" name="header" placeholder="Piparit">
                     </div>
                     <div class="recipe-guide">
                         <h3>Lisää ainesosat</h3>
@@ -95,32 +95,38 @@
                         <input type="text" id="recipe-input" name="unit" max="3" placeholder="dl">
                         <input type="text" id="recipe-input" name="ingredient" placeholder="sokeri">
                     </div>
+                    <div  id="addMore-includes">
+                        <!-- Uusi kenttä js -->
+                    </div>
                     <div class="add-more">
                         <div class="recipe-guide">
                             <p>Uusi ainesosa</p>
                         </div>
-                        <i class="fas fa-plus-circle"></i>
+                        <button class="addButton" id="addBtnInc"><i class="fas fa-plus-circle"></i></button>
                     </div>
                 
                     <div class="recipe-guide">
                         <h3>Lisää ohjeet</h3>
                     </div>
                     <div class="add-recipe-steps">
-                        <input type="number" class="step" id="recipe-input" name="step" min="1" placeholder="1.">
+                        <!-- Turha?? <input type="number" class="step" id="recipe-input" name="step" min="1" placeholder="1."> -->
                         <textarea name="description" class="resizable" id="recipe-input" placeholder="Laita uuni päälle"></textarea>
+                    </div>
+                    <div  id="addMore-steps">
+                        <!-- Uusi kenttä js -->
                     </div>
                     <div class="add-more">
                         <div class="recipe-guide">
                             <p>Uusi vaihe</p>
                         </div>
-                        <i class="fas fa-plus-circle"></i>
+                        <button class="addButton" id="addBtnSteps"><i class="fas fa-plus-circle"></i></button>
                     </div>
 
                     <div class="recipe-guide">
                         <h3>Lisää valmistusaika</h3>
                     </div>
                     <div class="add-recipe-cooktime">
-                        <input type="number" id="recipe-input" name="cooktime" min="1" placeholder="min" class="step">
+                        <input type="number" id="recipe-input" name="step" min="1" placeholder="min" class="step">
                     </div>
                 
                     <div class="recipe-guide">
@@ -129,18 +135,21 @@
                     <div class="add-recipe-category">
                         <input type="text" id="recipe-input" name="category" placeholder="Leivonta" class="category">
                     </div>
+                    <div  id="addMore-category">
+                        <!-- Uusi kenttä js -->
+                    </div>
                     <div class="add-more">
                         <div class="recipe-guide">
                             <p>Uusi kategoria</p>
                         </div>
-                        <i class="fas fa-plus-circle"></i>
+                        <button class="addButton" id="addBtnCategory"><i class="fas fa-plus-circle"></i></button>
                     </div>
                 
                     <div class="recipe-guide">
                         <h3>Lisää kuva</h3>
                     </div>
                     <div class="add-recipe-picture">
-                        <input type="file" name="picture">
+                        <input type="file" name="picture" accept="image/*">
                     </div>
                     <input type="submit" value="Tallenna">
                 </form>
@@ -171,8 +180,9 @@
         </footer>
 
         <script src="js/script.js"></script>
-        <script src="js/check-login.js"></script>
-        <script src="js/add-recipe.js"></script>
+        <!-- <script src="js/check-login.js"></script> -->
+        <script src="js/modify-recipe.js"></script>
+        <script src="js/plusbutton.js"></script>
     </body>
 
 </html>
