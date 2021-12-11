@@ -1,67 +1,122 @@
 'use strict';
 
-const recipeStuff = [
-    {
-        filename: 'img/image10.jpg',
-        title: 'Joululetut',
-        user: 'BestCook',
-        profilepic: 'https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo',
-        rates: '4/5',
-        cooktime: '30',
-    },
-];
+const url = 'http://localhost:3000';
 
-const categoryStuff = ["Leivonta", "Jälkiruoka", "Jouluinen", "Herkku"];
+// const recipe = [
+//     {
+//         filename: 'img/image10.jpg',
+//         title: 'Joululetut',
+//         user: 'BestCook',
+//         profilepic: 'https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo',
+//         rates: '4/5',
+//         cooktime: '30',
+//         categories: ["Leivonta", "Jälkiruoka", "Jouluinen", "Herkku"],
+//         ingredients: [
+//             {
+//                 count: '1',
+//                 unit: 'dl',
+//                 name: 'sokeri',
+//             },
+//             {
+//                 count: '4',
+//                 unit: 'dl',
+//                 name: 'jauhot',
+//             },
+//             {
+//                 count: '1',
+//                 unit: 'rkl',
+//                 name: 'leivinjauhe',
+//             },
+//             {
+//                 count: '3',
+//                 unit: 'kpl',
+//                 name: 'kananmuna',
+//             },
+//             {
+//                 count: '6',
+//                 unit: 'dl',
+//                 name: 'maito',
+//             },
+//         ],
+//         steps: [
+//             {
+//                 desc: 'Vatkaa munien rakenne rikki kulhossa. Lisää taikinaan n. 2 dl maitoa ja muut aineet ja vatkaa tasaiseksi. Lisää loppu maito ja sekoita. Anna turvota 30 min.',
+//             },
+//             {
+//                 desc: 'Paista taikinasta ohukaisia Oivariini rasvassa pannulla.',
+//             },
+//             {
+//                 desc: 'Tarjoa lisänä esim. kermavaahtoa, marjoja, sokeria, hilloa, sokeroitua marjasurvosta tai jäätelöä.',
+//             },
+//         ],
+//     },
+// ];
 
-const ingredientStuff = [
-    {
-        count: '1',
-        unit: 'dl',
-        name: 'sokeri',
-    },
-    {
-        count: '4',
-        unit: 'dl',
-        name: 'jauhot',
-    },
-    {
-        count: '1',
-        unit: 'rkl',
-        name: 'leivinjauhe',
-    },
-    {
-        count: '3',
-        unit: 'kpl',
-        name: 'kananmuna',
-    },
-    {
-        count: '6',
-        unit: 'dl',
-        name: 'maito',
-    },
-];
 
-const stepsStuff = [
-    {
-        desc: 'Vatkaa munien rakenne rikki kulhossa. Lisää taikinaan n. 2 dl maitoa ja muut aineet ja vatkaa tasaiseksi. Lisää loppu maito ja sekoita. Anna turvota 30 min.',
-    },
-    {
-        desc: 'Paista taikinasta ohukaisia Oivariini rasvassa pannulla.',
-    },
-    {
-        desc: 'Tarjoa lisänä esim. kermavaahtoa, marjoja, sokeria, hilloa, sokeroitua marjasurvosta tai jäätelöä.',
-    },
-];
+// const getRecipe = async () => {
+//     try {
+//         const response = await fetch(url + '/recipe');
+//         const recipes = await response.json();
+//         return recipes;
+//     } catch (e) {
+//         console.log(e.message);
+//     }
+// };
+
+// getRecipe();
+
+
+// const categoryStuff = ["Leivonta", "Jälkiruoka", "Jouluinen", "Herkku"];
+
+// const ingredientStuff = [
+//     {
+//         count: '1',
+//         unit: 'dl',
+//         name: 'sokeri',
+//     },
+//     {
+//         count: '4',
+//         unit: 'dl',
+//         name: 'jauhot',
+//     },
+//     {
+//         count: '1',
+//         unit: 'rkl',
+//         name: 'leivinjauhe',
+//     },
+//     {
+//         count: '3',
+//         unit: 'kpl',
+//         name: 'kananmuna',
+//     },
+//     {
+//         count: '6',
+//         unit: 'dl',
+//         name: 'maito',
+//     },
+// ];
+
+// const stepsStuff = [
+//     {
+//         desc: 'Vatkaa munien rakenne rikki kulhossa. Lisää taikinaan n. 2 dl maitoa ja muut aineet ja vatkaa tasaiseksi. Lisää loppu maito ja sekoita. Anna turvota 30 min.',
+//     },
+//     {
+//         desc: 'Paista taikinasta ohukaisia Oivariini rasvassa pannulla.',
+//     },
+//     {
+//         desc: 'Tarjoa lisänä esim. kermavaahtoa, marjoja, sokeria, hilloa, sokeroitua marjasurvosta tai jäätelöä.',
+//     },
+// ];
 
 
 const recipebasis = document.querySelector('.recipebasis');
 
-const getRecipe = () => {
+const getRecipe = (recipeData) => {
     recipebasis.innerHTML = ``;
     recipebasis.innerHTML +=
         `<div class="col-12 recipebasis">
         <div class="recipe-header-img">
-            <img class="recipe-img" src="${recipeStuff[0].filename}" alt="Reseptin kuva">
+            <img class="recipe-img" src="${recipeData[0].filename}" alt="Reseptin kuva">
         </div>
         <div class="recipe-addfav">
             <i class="far fa-heart recipe-emptyfav"></i>
@@ -69,7 +124,7 @@ const getRecipe = () => {
         </div>
         <div class="recipe-header">
             <div class="recipe-name">
-                <h2>${recipeStuff[0].title}</h2>
+                <h2>${recipeData[0].title}</h2>
             </div>
             <div class="rates">
                 <i class="fas fa-candy-cane rate"></i>
@@ -81,12 +136,12 @@ const getRecipe = () => {
         </div>
         <div class="recipe-info-container">
             <div class="recipe-user">
-                <img src="${recipeStuff[0].profilepic}"
+                <img src="${recipeData[0].profilepic}"
                     alt="user" />
-                <h5 class="recipe-username"><a href="profilepage.html">${recipeStuff[0].user}</a></h5>
+                <h5 class="recipe-username"><a href="profilepage.html">${recipeData[0].user}</a></h5>
             </div>
             <div class="recipe-rates">
-                <i class="fas fa-candy-cane"></i>${recipeStuff[0].rates}
+                <i class="fas fa-candy-cane"></i>${recipeData[0].rates}
             </div>
         </div>
         <div class="recipe-categories">
@@ -97,9 +152,9 @@ const getRecipe = () => {
 
     recipeCategories.innerHTML = ``;
 
-    for (let i = 0; i < categoryStuff.length; i++) {
+    for (let i = 0; i < recipeData[0].categories.length; i++) {
         recipeCategories.innerHTML +=
-            `<button class="recipe-cat-item">${categoryStuff[i]}</button>`;
+            `<button class="recipe-cat-item">${recipeData[0].categories[i]}</button>`;
     }
 
     recipebasis.innerHTML +=
@@ -122,7 +177,7 @@ const getRecipe = () => {
                 </div>
                 <div class="recipe-cookingtime">
                     <i class="far fa-clock cooktime"></i>
-                    <p>${recipeStuff[0].cooktime} min</p>
+                    <p>${recipeData[0].cooktime} min</p>
                 </div>
             </div>
         </div>`;
@@ -131,20 +186,20 @@ const getRecipe = () => {
 
     recipeIngredients.innerHTML = ``;
 
-    for (let i = 0; i < ingredientStuff.length; i++) {
+    for (let i = 0; i < recipeData[0].ingredients.length; i++) {
         recipeIngredients.innerHTML +=
-            `<li class="recipe-grid">${ingredientStuff[i].count}</li>
-            <li class="recipe-grid">${ingredientStuff[i].unit}</li>
-            <li class="recipe-grid">${ingredientStuff[i].name}</li>`;
+            `<li class="recipe-grid">${recipeData[0].ingredients[i].count}</li>
+            <li class="recipe-grid">${recipeData[0].ingredients[i].unit}</li>
+            <li class="recipe-grid">${recipeData[0].ingredients[i].name}</li>`;
     }
 
     const recipeSteps = document.querySelector(".step-list");
 
     recipeSteps.innerHTML = ``;
 
-    for (let i = 0; i < stepsStuff.length; i++) {
+    for (let i = 0; i < recipeData[0].steps.length; i++) {
         recipeSteps.innerHTML +=
-            `<li>${stepsStuff[i].desc}</li>`;
+            `<li>${recipeData[0].steps[i].desc}</li>`;
     }
 
 
@@ -161,4 +216,15 @@ const getRecipe = () => {
 
 }
 
-getRecipe();
+const getrecipeData = async () => {
+    try {
+        const response = await fetch(url + '/recipe');
+        const recipes = await response.json();
+        getRecipe(recipes);
+    } catch (e) {
+        console.log(e.message);
+    }
+};
+
+getrecipeData();
+
