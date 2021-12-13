@@ -104,7 +104,11 @@ CREATE TABLE Favourites
   FOREIGN KEY (RecipeID) REFERENCES Recipe(RecipeID)
 );
 
--- SQL- lauseet backendiä varten
+INSERT INTO Cookmas_User (Username, Email, Password, Hometown, ProfilePic) 
+VALUES
+('Joulupukki', 'joulupukki@korvatunturi.fi', '1234', 'Rovaniemi', 
+'https://im.mtv.fi/image/7646368/landscape16_9/1600/900/4678580b72d63463b0627ab101bcba02/zx/joulupukki-selfie.jpg');
+
 
 --Reseptin lisäys
 
