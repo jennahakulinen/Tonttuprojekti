@@ -112,8 +112,11 @@ const getRecipe = (recipeData) => {
 
 const getrecipeData = async () => {
     try {
-        const response = await fetch(url + '/recipe');
+        let params = new URLSearchParams(location.search);
+        const recipeID = params.get("recipeID");
+        const response = await fetch(url + '/recipe/' + recipeID);
         const recipes = await response.json();
+        console.log(recipes)
         getRecipe(recipes);
     } catch (e) {
         console.log(e.message);
