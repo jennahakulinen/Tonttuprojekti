@@ -32,7 +32,7 @@ const getRecipe = (recipeData) => {
             <div class="recipe-user">
                 <img src="${url}/${recipeData[0].profilepic}"
                     alt="user" />
-                <h5 class="recipe-username"><a href="profilepage.html">${recipeData[0].user}</a></h5>
+                <h5 class="recipe-username"><a href="#">${recipeData[0].user}</a></h5>
             </div>
             <div class="recipe-rates">
                 <i class="fas fa-candy-cane"></i>${recipeData[0].rates}
