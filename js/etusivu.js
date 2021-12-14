@@ -108,13 +108,13 @@ const getRecipeCards = (recipeData) => {
             `<div class="card col-5">
             <a href="recipe.html?recipeID=${recipeData[i].recipeID}">
                 <div class="card-header">
-                    <img class="card-img" src="${recipeData[i].filename}" alt="Reseptin kuva">
+                    <img class="card-img" src="${url}/${recipeData[i].filename}" alt="Reseptin kuva">
                 </div>
                 <div class="card-container">
                     <h4 class="card-title">${recipeData[i].title}</h4>
                     <div class="info-container">
                         <div class="user">
-                            <img src="${recipeData[i].profilepic}"
+                            <img src="${url}/${recipeData[i].profilepic}"
                                 alt="Käyttäjän profiilikuva">
                             <h5 class="username">${recipeData[i].user}</h5>
                         </div>
@@ -140,3 +140,9 @@ const getrecipeData = async () => {
 };
 
 getrecipeData();
+
+if (sessionStorage.getItem('user')) {
+    document.querySelector('#login').href = 'profilepage.html';
+    const recipeAddBtn = document.querySelector('#recipeadd');
+    recipeAddBtn.style.display = 'block';
+}
