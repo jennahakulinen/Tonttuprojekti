@@ -96,6 +96,11 @@
                         <input type="text" id="recipe-input" name="unit" max="3" placeholder="dl">
                         <input type="text" id="recipe-input" name="ingredient" placeholder="sokeri">
                     </div>
+                    <div class="recipe-includes">
+                        <input type="number" id="recipe-input" name="quantity" min="1" placeholder="3">
+                        <input type="text" id="recipe-input" name="unit" max="3" placeholder="kpl">
+                        <input type="text" id="recipe-input" name="ingredient" placeholder="kananmuna">
+                    </div>
                     <div id="addMore-includes">
                         <!-- Uusi kenttä js -->
                     </div>
@@ -110,9 +115,12 @@
                         <h3>Lisää ohjeet</h3>
                     </div>
                     <div class="add-recipe-steps">
-                        <!-- Turha?? <input type="number" class="step" id="recipe-input" name="step" min="1" placeholder="1."> -->
                         <textarea name="description" class="resizable" id="recipe-input"
-                            placeholder="Laita uuni päälle"></textarea>
+                        placeholder="Laita uuni päälle"></textarea>
+                    </div>
+                    <div class="add-recipe-steps">
+                        <textarea name="description" class="resizable" id="recipe-input"
+                        placeholder="Sekoita kuivat ainekset."></textarea>
                     </div>
                     <div id="addMore-steps">
                         <!-- Uusi kenttä js -->
@@ -133,6 +141,9 @@
 
                     <div class="recipe-guide">
                         <h3>Lisää kategoriat</h3>
+                    </div>
+                    <div class="add-recipe-category">
+                        <input type="text" id="recipe-input" name="category" placeholder="Jälkiruoka" class="category">
                     </div>
                     <div class="add-recipe-category">
                         <input type="text" id="recipe-input" name="category" placeholder="Leivonta" class="category">

@@ -919,7 +919,7 @@ footer {
 
 .add-recipe-category {
   display: grid;
-  grid-template-columns: 20% 10%;
+  grid-template-columns: 50% 10%;
   grid-column-gap: 15px;
   padding: 20px 0 0 0;
 }
