@@ -20,6 +20,7 @@
       } else {
         const json = await response.json();
         sessionStorage.setItem('user', JSON.stringify(json.user));
+        document.querySelector('#login').href = 'profilepage.html';
       }
     } catch (e) {
       console.log(e.message);
