@@ -18,6 +18,6 @@ addForm.addEventListener('submit', async (evt) => {
   };
   const response = await fetch(url + '/recipe', fetchOptions);
   const json = await response.json();
-  alert(json.message);
-  // location.href = 'etusivu.html';
+  alert("Recipe added!");
+  location.href = 'etusivu.html';
 });

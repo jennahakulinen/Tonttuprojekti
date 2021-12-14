@@ -125,3 +125,8 @@ const getrecipeData = async () => {
 
 getrecipeData();
 
+if (sessionStorage.getItem('user')) {
+    document.querySelector('#login').href = 'profilepage.html';
+    const recipeAddBtn = document.querySelector('#recipeadd');
+    recipeAddBtn.style.display = 'block';
+}

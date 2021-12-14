@@ -100,7 +100,6 @@ const recipes = document.querySelector('.recipes');
 
 const getRecipeCards = (recipeData) => {
     recipes.innerHTML = ``;
-    console.log(recipeData);
 
     for (let i = 0; i < recipeData.length; i++) {
 
