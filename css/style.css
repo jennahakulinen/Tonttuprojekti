@@ -47,6 +47,10 @@ main {
 
 /* NAVIGATION */
 
+#recipeadd {
+  display: none;
+}
+
 .navigationButton {
   position: absolute;
   text-align: center;
@@ -588,6 +592,7 @@ footer {
   width: 35px;
   height: 35px;
   margin-right: 5px;
+  object-fit: cover;
 }
 .user-info {
   display: flex;
@@ -754,6 +759,7 @@ footer {
 }
 
 .recipe-user img {
+  object-fit: cover;
   border-radius: 50%;
   width: 35px;
   height: 35px;

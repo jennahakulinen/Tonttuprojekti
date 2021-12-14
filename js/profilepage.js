@@ -25,7 +25,7 @@ const getProfile = (profileData) => {
     addProfile.innerHTML = ``;
     addProfile.innerHTML +=
         `<div class="img__profile">
-            <img src="${profileData.ProfilePic}" alt="profile">
+            <img src="${url}/${profileData.ProfilePic}" alt="profile">
         </div>
         <div class="name">${profileData.Username}</div>`;
 }
@@ -35,9 +35,9 @@ const getProfileData = async () => {
     try {
         const fetchOptions = {
             headers: {
-              Authorization: 'Bearer ' + sessionStorage.getItem('token'),
+                Authorization: 'Bearer ' + sessionStorage.getItem('token'),
             },
-          };
+        };
         const response = await fetch(url + '/user/' + user.Username, fetchOptions);
         const profiles = await response.json();
         getProfile(profiles);

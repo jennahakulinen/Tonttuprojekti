@@ -10,7 +10,7 @@ const getRecipe = (recipeData) => {
     recipebasis.innerHTML +=
         `<div class="col-12 recipebasis">
         <div class="recipe-header-img">
-            <img class="recipe-img" src="${recipeData[0].filename}" alt="Reseptin kuva">
+            <img class="recipe-img" src="${url}/${recipeData[0].filename}" alt="Reseptin kuva">
         </div>
         <div class="recipe-addfav">
             <i class="far fa-heart recipe-emptyfav"></i>
@@ -30,9 +30,9 @@ const getRecipe = (recipeData) => {
         </div>
         <div class="recipe-info-container">
             <div class="recipe-user">
-                <img src="${recipeData[0].profilepic}"
+                <img src="${url}/${recipeData[0].profilepic}"
                     alt="user" />
-                <h5 class="recipe-username"><a href="profilepage.html">${recipeData[0].user}</a></h5>
+                <h5 class="recipe-username"><a href="#">${recipeData[0].user}</a></h5>
             </div>
             <div class="recipe-rates">
                 <i class="fas fa-candy-cane"></i>${recipeData[0].rates}
@@ -125,3 +125,8 @@ const getrecipeData = async () => {
 
 getrecipeData();
 
+if (sessionStorage.getItem('user')) {
+    document.querySelector('#login').href = 'profilepage.html';
+    const recipeAddBtn = document.querySelector('#recipeadd');
+    recipeAddBtn.style.display = 'block';
+}

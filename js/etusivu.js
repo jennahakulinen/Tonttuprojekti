@@ -2,49 +2,49 @@
 
 const url = 'http://localhost:3000';
 
-const popularArray = [
-    {
-        filename: 'img/image5.jpg',
-        recipelink: 'recipe.html',
-    },
-    {
-        filename: 'img/image4.jpg',
-        recipelink: 'recipe.html',
-    },
-    {
-        filename: 'img/image3.jpg',
-        recipelink: 'recipe.html',
-    },
-    {
-        filename: 'img/image2.jpg',
-        recipelink: 'recipe.html',
-    },
-    {
-        filename: 'img/image1.jpg',
-        recipelink: 'recipe.html',
-    },
-];
+// const popularArray = [
+//     {
+//         filename: 'img/image5.jpg',
+//         recipelink: 'recipe.html',
+//     },
+//     {
+//         filename: 'img/image4.jpg',
+//         recipelink: 'recipe.html',
+//     },
+//     {
+//         filename: 'img/image3.jpg',
+//         recipelink: 'recipe.html',
+//     },
+//     {
+//         filename: 'img/image2.jpg',
+//         recipelink: 'recipe.html',
+//     },
+//     {
+//         filename: 'img/image1.jpg',
+//         recipelink: 'recipe.html',
+//     },
+// ];
 
 const slideshow = document.querySelector('.slideshow-container');
 
-const getPopularRecipes = () => {
+const getPopularRecipes = (recipeData) => {
     slideshow.innerHTML = ``;
     slideshow.innerHTML +=
         `<div class="items">
         <div class="item active">
-            <a href="${popularArray[0].recipelink}"><img src="${popularArray[0].filename}" alt="Slideshow-kuva"></a>
+            <a href="recipe.html?recipeID=${recipeData[0].recipeID}"><img src="${url}/${recipeData[0].filename}" alt="Slideshow-kuva"></a>
         </div>
         <div class="item next">
-            <a href="${popularArray[1].recipelink}"><img src="${popularArray[1].filename}" alt="Slideshow-kuva"></a>
+            <a href="recipe.html?recipeID=${recipeData[1].recipeID}"><img src="${url}/${recipeData[1].filename}" alt="Slideshow-kuva"></a>
         </div>
         <div class="item">
-            <a href="${popularArray[2].recipelink}"><img src="${popularArray[2].filename}" alt="Slideshow-kuva"></a>
+            <a href="recipe.html?recipeID=${recipeData[2].recipeID}"><img src="${url}/${recipeData[2].filename}" alt="Slideshow-kuva"></a>
         </div>
         <div class="item">
-            <a href="${popularArray[3].recipelink}"><img src="${popularArray[3].filename}" alt="Slideshow-kuva"></a>
+            <a href="recipe.html?recipeID=${recipeData[3].recipeID}"><img src="${url}/${recipeData[3].filename}" alt="Slideshow-kuva"></a>
         </div>
         <div class="item prev">
-            <a href="${popularArray[4].recipelink}"><img src="${popularArray[4].filename}" alt="Slideshow-kuva"></a>
+            <a href="recipe.html?recipeID=${recipeData[4].recipeID}"><img src="${url}/${recipeData[4].filename}" alt="Slideshow-kuva"></a>
         </div>
         <div class="button-container">
             <div class="button"><i class="fas fa-angle-left"></i></div>
@@ -92,15 +92,12 @@ const getPopularRecipes = () => {
     }
 }
 
-getPopularRecipes();
-
 
 
 const recipes = document.querySelector('.recipes');
 
 const getRecipeCards = (recipeData) => {
     recipes.innerHTML = ``;
-    console.log(recipeData);
 
     for (let i = 0; i < recipeData.length; i++) {
 
@@ -108,13 +105,13 @@ const getRecipeCards = (recipeData) => {
             `<div class="card col-5">
             <a href="recipe.html?recipeID=${recipeData[i].recipeID}">
                 <div class="card-header">
-                    <img class="card-img" src="${recipeData[i].filename}" alt="Reseptin kuva">
+                    <img class="card-img" src="${url}/${recipeData[i].filename}" alt="Reseptin kuva">
                 </div>
                 <div class="card-container">
                     <h4 class="card-title">${recipeData[i].title}</h4>
                     <div class="info-container">
                         <div class="user">
-                            <img src="${recipeData[i].profilepic}"
+                            <img src="${url}/${recipeData[i].profilepic}"
                                 alt="Käyttäjän profiilikuva">
                             <h5 class="username">${recipeData[i].user}</h5>
                         </div>
@@ -134,9 +131,16 @@ const getrecipeData = async () => {
         const response = await fetch(url + '/recipe');
         const recipes = await response.json();
         getRecipeCards(recipes);
+        getPopularRecipes(recipes);
     } catch (e) {
         console.log(e.message);
     }
 };
 
 getrecipeData();
+
+if (sessionStorage.getItem('user')) {
+    document.querySelector('#login').href = 'profilepage.html';
+    const recipeAddBtn = document.querySelector('#recipeadd');
+    recipeAddBtn.style.display = 'block';
+}
