@@ -7,7 +7,8 @@ const addMoreBtnInc = document.getElementById("addBtnInc");
 const addMoreBtnStep = document.getElementById("addBtnSteps");
 const addMoreCategory = document.getElementById("addBtnCategory");
 
-addMoreBtnInc.onclick = () => {
+addMoreBtnInc.addEventListener('click', (evt) => {
+    evt.preventDefault();
     const addMoreIncHtml =
 
         `<div class="recipe-includes">
@@ -17,9 +18,10 @@ addMoreBtnInc.onclick = () => {
         </div>`;
 
     formtagInc.innerHTML += addMoreIncHtml;
-}
-    
-addMoreBtnStep.onclick = () => {
+})
+
+addMoreBtnStep.addEventListener('click', (evt) => {
+    evt.preventDefault();
     const addMoreStepHtml =
 
         `<div class="add-recipe-steps">
@@ -27,9 +29,10 @@ addMoreBtnStep.onclick = () => {
         </div>`;
 
     formtagStep.innerHTML += addMoreStepHtml;
-}
+})
 
-addMoreCategory.onclick = () => {
+addMoreCategory.addEventListener('click', (evt) => {
+    evt.preventDefault();
     const addMoreCategoryHtml =
 
         `<div class="add-recipe-category">
@@ -37,4 +40,4 @@ addMoreCategory.onclick = () => {
         </div>`;
 
     formtagCategory.innerHTML += addMoreCategoryHtml;
-}
+})

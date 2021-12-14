@@ -49,6 +49,7 @@ const categoryPressed = (name) => {
 
 
 
+
 const categoryCards = document.querySelector('.recipes');
 const categoryHeader = document.querySelector('.category-name');
 
