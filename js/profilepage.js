@@ -2,21 +2,6 @@
 
 const url = 'http://localhost:3000';
 
-// const profileArray = [
-//     {
-//     filename: 'img/santa-claus.png',
-//     username: 'Käyttäjä 1'
-//     },
-//     {
-//     filename: 'img/santa-claus.png',
-//     username: 'Käyttäjä 1'
-//     },
-//     {
-//     filename: 'img/santa-claus.png',
-//     username: 'Käyttäjä 1'
-//     }
-
-// ]
 
 const addProfile = document.querySelector('#addProfile');
 
