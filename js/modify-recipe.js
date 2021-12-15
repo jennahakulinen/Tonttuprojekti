@@ -1,8 +1,8 @@
 // Ei toimi
 
 'use strict';
-const url = 'http://localhost:3000'; // change url when uploading to server
-
+// const url = 'http://localhost:3000'; // change url when uploading to server
+const url = 'https://10.114.34.22/app/';
 // get query parameter
 const getQParam = (param) => {
   const queryString = window.location.search;

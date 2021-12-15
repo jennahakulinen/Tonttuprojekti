@@ -1,7 +1,7 @@
 'use strict';
 
-const url = 'http://localhost:3000';
-
+// const url = 'http://localhost:3000';
+const url = 'https://10.114.34.22/app/';
 
 const recipeCategories = document.querySelector('.recipe-categories-page');
 
