@@ -47,6 +47,10 @@ main {
 
 /* NAVIGATION */
 
+#recipeadd {
+  display: none;
+}
+
 .navigationButton {
   position: absolute;
   text-align: center;
@@ -532,6 +536,7 @@ footer {
 
 .card-title {
   padding: 2px;
+  font-size: 0.95em;
 }
 
 .fa-candy-cane {
@@ -587,6 +592,7 @@ footer {
   width: 35px;
   height: 35px;
   margin-right: 5px;
+  object-fit: cover;
 }
 .user-info {
   display: flex;
@@ -753,6 +759,7 @@ footer {
 }
 
 .recipe-user img {
+  object-fit: cover;
   border-radius: 50%;
   width: 35px;
   height: 35px;
@@ -776,9 +783,8 @@ footer {
   margin: 0 2.5rem;
 }
 
-.recipe-steps ul li {
+.recipe-steps ol li {
   padding: 0.5em;
-  list-style-type: circle;
 }
 
 .re-hr {
@@ -789,10 +795,6 @@ footer {
   margin-top: 1rem;
 }
 
-/* .recipe-ingredients {
-  display: grid;
-  grid-template-columns: 5% 10% 80%;
-} */
 
 .recipe-grid-container {
   display: grid;
@@ -827,7 +829,7 @@ footer {
   background-color: #fafafa;
   border-style: none;
   border-radius: 50%;
-  z-index: 600;
+  z-index: 100;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   cursor: pointer;
   height: 3rem;
@@ -863,6 +865,7 @@ footer {
 .recipe-categories {
   margin: 10px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .recipe-cat-item {
@@ -870,10 +873,13 @@ footer {
   width: fit-content;
   border-radius: 20px;
   font-size: 0.75em;
+  color: inherit;
+  font-family: inherit;
   text-align: center;
   padding: 8px;
-  margin: 0 2px;
+  margin: 2px;
   cursor: pointer;
+  border: none;
 }
 
 /* ADD RECIPE */
@@ -894,16 +900,14 @@ footer {
 }
 
 .add-recipe-steps {
-  display: grid;
-  grid-template-columns: 10% 60% 10%;
-  grid-column-gap: 15px;
   padding: 20px 0 0 0;
 }
 
 .resizable {
   resize: vertical;
   overflow: visible;
-  min-height: 30px;
+  min-height: 100px;
+  width: 100%;
   font-family: "Quicksand", sans-serif;
 }
 
@@ -917,7 +921,7 @@ footer {
 
 .add-recipe-category {
   display: grid;
-  grid-template-columns: 20% 10%;
+  grid-template-columns: 50% 10%;
   grid-column-gap: 15px;
   padding: 20px 0 0 0;
 }
@@ -959,6 +963,19 @@ footer {
   padding: 0 0 0 5px;
   border: 1px solid silver;
   font-family: "Quicksand", sans-serif;
+}
+
+/* CATEGORY PAGE */
+
+.categories-page {
+  margin: auto;
+}
+
+.recipe-categories-page {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /*

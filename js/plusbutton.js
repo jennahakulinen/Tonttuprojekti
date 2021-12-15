@@ -6,36 +6,50 @@ const formtagCategory = document.getElementById("addMore-category");
 const addMoreBtnInc = document.getElementById("addBtnInc");
 const addMoreBtnStep = document.getElementById("addBtnSteps");
 const addMoreCategory = document.getElementById("addBtnCategory");
+let input_number = 1;
 
-addMoreBtnInc.onclick = () => {
-    const addMoreIncHtml =
+addMoreBtnInc.addEventListener('click', (evt) => {
+    evt.preventDefault();
 
-        `<div class="recipe-includes">
+    const lisaaKentta = () => {
+        input_number++;
+        let inputKentat =
+            `<div class="recipe-includes">
         <input type="number" id="recipe-input" name="quantity" min="1" placeholder="2">
         <input type="text" id="recipe-input" name="unit" max="3" placeholder="dl">
         <input type="text" id="recipe-input" name="ingredient" placeholder="sokeri">
         </div>`;
+        formtagInc.insertAdjacentHTML("beforeend", inputKentat);
+    }
 
-    formtagInc.innerHTML += addMoreIncHtml;
-}
-    
-addMoreBtnStep.onclick = () => {
-    const addMoreStepHtml =
+    lisaaKentta();
 
-        `<div class="add-recipe-steps">
-        <input type="number" class="step" id="recipe-input" name="step" min="1" placeholder="1.">
+});
+
+addMoreBtnStep.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    const lisaaKentta = () => {
+        input_number++;
+        let inputKentat =
+            `<div class="add-recipe-steps">
         <textarea name="description" class="resizable" id="recipe-input" placeholder="Laita uuni päälle"></textarea>
         </div>`;
+        formtagStep.insertAdjacentHTML("beforeend", inputKentat);
+    }
 
-    formtagStep.innerHTML += addMoreStepHtml;
-}
+    lisaaKentta();
 
-addMoreCategory.onclick = () => {
-    const addMoreCategoryHtml =
+})
 
-        `<div class="add-recipe-category">
+addMoreCategory.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    const lisaaKentta = () => {
+        input_number++;
+        let inputKentat =
+            `<div class="add-recipe-category">
         <input type="text" id="recipe-input" name="category" placeholder="Leivonta" class="category">
         </div>`;
-
-    formtagCategory.innerHTML += addMoreCategoryHtml;
-}
+        formtagCategory.insertAdjacentHTML("beforeend", inputKentat);
+    }
+    lisaaKentta();
+})

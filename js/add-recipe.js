@@ -3,7 +3,7 @@ const url = 'http://localhost:3000'; // change url when uploading to server
 
 // select existing html elements
 const addForm = document.querySelector('#addRecipeForm');
-const userList = document.querySelector('.add-owner');
+
 
 // submit add recipe form
 addForm.addEventListener('submit', async (evt) => {
@@ -18,6 +18,6 @@ addForm.addEventListener('submit', async (evt) => {
   };
   const response = await fetch(url + '/recipe', fetchOptions);
   const json = await response.json();
-  alert(json.message);
+  alert("Recipe added!");
   location.href = 'etusivu.html';
 });

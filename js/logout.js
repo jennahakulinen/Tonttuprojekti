@@ -10,7 +10,7 @@ const url = 'http://localhost:3000'; // change url when uploading to server
     sessionStorage.removeItem('token');
     sessionStorage.removeItem('user');
     alert('You have logged out');
-    location.href = 'login.html';
+    location.href = 'etusivu.html';
   } catch (e) {
     console.log(e.message);
   }

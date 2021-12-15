@@ -40,7 +40,7 @@
                 </button>
 
                 <button class="navigationButton userBut">
-                    <a href="login.html"><i class="fas fa-user icon"></i></a>
+                    <a id="login" href="login.html"><i class="fas fa-user icon"></i></a>
                 </button>
 
                 <button class="navigationButton hamBut">
@@ -57,19 +57,11 @@
                         <li class="navigationItem">
                             <a href="etusivu.html" class="navigationLink">Etusivu</a>
                         </li>
-                        <li class="navigationItem dropdown">
-                            <button class="navigationLink dropBut">Kategoriat <i class="fas fa-caret-down"></i></a>
-                                <ul id="dropdownMenu" class="dropdownContent">
-                                    <li class="dropItem">
-                                        <a href="#">Leivonta</a>
-                                    </li>
-                                    <li class="dropItem">
-                                        <a href="#">Vegaaninen joulu</a>
-                                    </li>
-                                    <li class="dropItem">
-                                        <a href="#">Perinteinen joulupöytä</a>
-                                    </li>
-                                </ul>
+                        <li class="navigationItem">
+                            <a href="category.html" class="navigationLink">Kategoriat</a>
+                        </li>
+                        <li class="navigationItem">
+                            <a id="recipeadd" href="addRecipe.html" class="navigationLink">Lisää resepti</a>
                         </li>
                     </ul>
                 </nav>
@@ -79,18 +71,21 @@
 
         <div class="container">
             <div class="center">
-                <div class="img__profile">
-                    <img src="img/santa-claus.png" alt="profile">
 
+                <div id="addProfile">
+                    <!-- js hakee profiilin -->
                 </div>
-
-                <div class="name">Joulupukki</div>
 
                 <div class="profile-container">
                     <div class="profile-item">
                         <i class="fas fa-user pro"></i>
                         <span>Omat tiedot</span>
                         <a href="modify-user.html"><i class="fas fa-chevron-right end"></i></a>
+                    </div>
+                    <div class="profile-item">
+                        <i class="fas fa-folder-plus pro"></i>
+                        <span>Lisää resepti</span>
+                        <a href="addRecipe.html"><i class="fas fa-chevron-right end"></i></a>
                     </div>
                     <div class="profile-item">
                         <i class="fas fa-candy-cane pro"></i>
@@ -105,7 +100,7 @@
                 </div>
                 <div class="item__logout">
                     <span>Kirjaudu ulos</span>
-                    <a href="login.html"><i class="fas fa-sign-out-alt"></i></a>
+                    <a href="logout.html"><i class="fas fa-sign-out-alt"></i></a>
                 </div>
             </div>
         </div>
@@ -133,8 +128,11 @@
         </div>
     </footer>
 
+
+    <script src="js/serialize.js"></script>
+    <script src="js/check-login.js"></script>
+    <script src="js/profilepage.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/logout.js"></script>
 
 </body>
 

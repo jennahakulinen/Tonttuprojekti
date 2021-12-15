@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oma profiili</title>
+    <title>Muokkaa reseptiä</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,7 +40,7 @@
                 </button>
 
                 <button class="navigationButton userBut">
-                    <a href="login.html"><i class="fas fa-user icon"></i></a>
+                    <a id="login" href="login.html"><i class="fas fa-user icon"></i></a>
                 </button>
 
                 <button class="navigationButton hamBut">
@@ -57,19 +57,11 @@
                         <li class="navigationItem">
                             <a href="etusivu.html" class="navigationLink">Etusivu</a>
                         </li>
-                        <li class="navigationItem dropdown">
-                            <button class="navigationLink dropBut">Kategoriat <i class="fas fa-caret-down"></i></a>
-                                <ul id="dropdownMenu" class="dropdownContent">
-                                    <li class="dropItem">
-                                        <a href="#">Leivonta</a>
-                                    </li>
-                                    <li class="dropItem">
-                                        <a href="#">Vegaaninen joulu</a>
-                                    </li>
-                                    <li class="dropItem">
-                                        <a href="#">Perinteinen joulupöytä</a>
-                                    </li>
-                                </ul>
+                        <li class="navigationItem">
+                            <a href="category.html" class="navigationLink">Kategoriat</a>
+                        </li>
+                        <li class="navigationItem">
+                            <a id="recipeadd" href="addRecipe.html" class="navigationLink">Lisää resepti</a>
                         </li>
                     </ul>
                 </nav>
@@ -95,7 +87,7 @@
                         <input type="text" id="recipe-input" name="unit" max="3" placeholder="dl">
                         <input type="text" id="recipe-input" name="ingredient" placeholder="sokeri">
                     </div>
-                    <div  id="addMore-includes">
+                    <div id="addMore-includes">
                         <!-- Uusi kenttä js -->
                     </div>
                     <div class="add-more">
@@ -104,15 +96,16 @@
                         </div>
                         <button class="addButton" id="addBtnInc"><i class="fas fa-plus-circle"></i></button>
                     </div>
-                
+
                     <div class="recipe-guide">
                         <h3>Lisää ohjeet</h3>
                     </div>
                     <div class="add-recipe-steps">
-                        <input type="number" class="step" id="recipe-input" name="step" min="1" placeholder="1.">
-                        <textarea name="description" class="resizable" id="recipe-input" placeholder="Laita uuni päälle"></textarea>
+                        <!-- Turha?? <input type="number" class="step" id="recipe-input" name="step" min="1" placeholder="1."> -->
+                        <textarea name="description" class="resizable" id="recipe-input"
+                            placeholder="Laita uuni päälle"></textarea>
                     </div>
-                    <div  id="addMore-steps">
+                    <div id="addMore-steps">
                         <!-- Uusi kenttä js -->
                     </div>
                     <div class="add-more">
@@ -128,14 +121,14 @@
                     <div class="add-recipe-cooktime">
                         <input type="number" id="recipe-input" name="step" min="1" placeholder="min" class="step">
                     </div>
-                
+
                     <div class="recipe-guide">
                         <h3>Lisää kategoriat</h3>
                     </div>
                     <div class="add-recipe-category">
                         <input type="text" id="recipe-input" name="category" placeholder="Leivonta" class="category">
                     </div>
-                    <div  id="addMore-category">
+                    <div id="addMore-category">
                         <!-- Uusi kenttä js -->
                     </div>
                     <div class="add-more">
@@ -144,45 +137,46 @@
                         </div>
                         <button class="addButton" id="addBtnCategory"><i class="fas fa-plus-circle"></i></button>
                     </div>
-                
+
                     <div class="recipe-guide">
                         <h3>Lisää kuva</h3>
                     </div>
                     <div class="add-recipe-picture">
-                        <input type="file" name="picture">
+                        <input type="file" name="picture" accept="image/*">
                     </div>
                     <input type="submit" value="Tallenna">
                 </form>
-            </main>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <a href="etusivu.html"><img class="logo-img-footer" src="img/logo_blacknwhite.svg" alt="logo"></a>
+                </div>
+                <div class="footer-contact">
+                    <a href="#">cookmas@contact.com</a>
+                </div>
+            </div>
+            <div class="footer-social">
+                <div class="fb"><i class="fab fa-facebook fa-2x"></i></div>
+                <div class="tw"><i class="fab fa-twitter fa-2x"></i></div>
+                <div class="ig"><i class="fab fa-instagram fa-2x"></i></div>
+            </div>
+
         </div>
 
-        <footer>
-            <div class="footer-content">
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <a href="etusivu.html"><img class="logo-img-footer" src="img/logo_blacknwhite.svg" alt="logo"></a>
-                    </div>
-                    <div class="footer-contact">
-                        <a href="#">cookmas@contact.com</a>
-                    </div>
-                </div>
-                <div class="footer-social">
-                    <div class="fb"><i class="fab fa-facebook fa-2x"></i></div>
-                    <div class="tw"><i class="fab fa-twitter fa-2x"></i></div>
-                    <div class="ig"><i class="fab fa-instagram fa-2x"></i></div>
-                </div>
+        <div class="footer-bottom">
+            &copy; Tontut
+        </div>
+    </footer>
 
-            </div>
-
-            <div class="footer-bottom">
-                &copy; Tontut
-            </div>
-        </footer>
-
-        <script src="js/script.js"></script>
-        <!-- <script src="js/check-login.js"></script> -->
-        <script src="js/modify-recipe.js"></script>
-        <script src="js/plusbutton.js"></script>
-    </body>
+    <script src="js/script.js"></script>
+    <script src="js/serialize.js"></script>
+    <script src="js/check-login.js"></script>
+    <script src="js/modify-recipe.js"></script>
+    <script src="js/plusbutton.js"></script>
+</body>
 
 </html>

@@ -1,3 +1,7 @@
+// Navigaatio scripti
+
+'use strict';
+
 const toggle = document.querySelector(".toggle");
 const menu = document.querySelector(".navigationNav");
 const menuBtn = document.querySelector(".hamBut");
@@ -75,26 +79,4 @@ closeBtn.onclick = () => {
 }
 
 
-dropdownBtn.onclick = () => {
-  if (dropdownMenu.style.display === "block") {
-    dropdownMenu.style.display = "none";
-  } else {
-    dropdownMenu.style.display = "block";
-  }
-}
-
-
-// Favorite-nappi reseptisivulla
-
-const likeBtn = document.querySelector(".recipe-addfav");
-const emptyHeart = document.querySelector(".recipe-emptyfav");
-const heart = document.querySelector(".recipe-fav");
-
-likeBtn.onclick = () => {
-  if (heart.style.visibility === "visible") {
-    heart.style.visibility = "hidden";
-  } else {
-    heart.style.visibility = "visible";
-  }
-}
 
