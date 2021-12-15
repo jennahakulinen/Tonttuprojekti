@@ -84,14 +84,14 @@
                         <h3>Lisää ainesosat</h3>
                     </div>
                     <div class="recipe-includes">
-                        <input type="number" id="recipe-input" name="quantity" min="1" placeholder="2">
-                        <input type="text" id="recipe-input" name="unit" max="3" placeholder="dl">
-                        <input type="text" id="recipe-input" name="ingredient" placeholder="sokeri">
+                        <input type="number" id="recipe-input" name="quantity" min="1" placeholder="2" required>
+                        <input type="text" id="recipe-input" name="unit" max="3" placeholder="dl" required>
+                        <input type="text" id="recipe-input" name="ingredient" placeholder="sokeri" required>
                     </div>
                     <div class="recipe-includes">
-                        <input type="number" id="recipe-input" name="quantity" min="1" placeholder="3">
-                        <input type="text" id="recipe-input" name="unit" max="3" placeholder="kpl">
-                        <input type="text" id="recipe-input" name="ingredient" placeholder="kananmuna">
+                        <input type="number" id="recipe-input" name="quantity" min="1" placeholder="3" required>
+                        <input type="text" id="recipe-input" name="unit" max="3" placeholder="kpl" required>
+                        <input type="text" id="recipe-input" name="ingredient" placeholder="kananmuna" required>
                     </div>
                     <div id="addMore-includes">
                         <!-- Uusi kenttä js -->
@@ -107,12 +107,12 @@
                         <h3>Lisää ohjeet</h3>
                     </div>
                     <div class="add-recipe-steps">
-                        <textarea name="description" class="resizable" id="recipe-input"
-                        placeholder="Laita uuni päälle"></textarea>
+                        <textarea name="description" class="resizable" id="recipe-input" placeholder="Laita uuni päälle"
+                            required></textarea>
                     </div>
                     <div class="add-recipe-steps">
                         <textarea name="description" class="resizable" id="recipe-input"
-                        placeholder="Sekoita kuivat ainekset."></textarea>
+                            placeholder="Sekoita kuivat ainekset" required></textarea>
                     </div>
                     <div id="addMore-steps">
                         <!-- Uusi kenttä js -->
@@ -128,17 +128,20 @@
                         <h3>Lisää valmistusaika</h3>
                     </div>
                     <div class="add-recipe-cooktime">
-                        <input type="number" id="recipe-input" name="time" min="1" placeholder="min" class="step">
+                        <input type="number" id="recipe-input" name="time" min="1" placeholder="min" class="step"
+                            required>
                     </div>
 
                     <div class="recipe-guide">
                         <h3>Lisää kategoriat</h3>
                     </div>
                     <div class="add-recipe-category">
-                        <input type="text" id="recipe-input" name="category" placeholder="Jälkiruoka" class="category">
+                        <input type="text" id="recipe-input" name="category" placeholder="Jälkiruoka" class="category"
+                            required>
                     </div>
                     <div class="add-recipe-category">
-                        <input type="text" id="recipe-input" name="category" placeholder="Leivonta" class="category">
+                        <input type="text" id="recipe-input" name="category" placeholder="Leivonta" class="category"
+                            required>
                     </div>
                     <div id="addMore-category">
                         <!-- Uusi kenttä js -->
