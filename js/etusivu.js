@@ -2,28 +2,6 @@
 
 const url = 'http://localhost:3000';
 
-// const popularArray = [
-//     {
-//         filename: 'img/image5.jpg',
-//         recipelink: 'recipe.html',
-//     },
-//     {
-//         filename: 'img/image4.jpg',
-//         recipelink: 'recipe.html',
-//     },
-//     {
-//         filename: 'img/image3.jpg',
-//         recipelink: 'recipe.html',
-//     },
-//     {
-//         filename: 'img/image2.jpg',
-//         recipelink: 'recipe.html',
-//     },
-//     {
-//         filename: 'img/image1.jpg',
-//         recipelink: 'recipe.html',
-//     },
-// ];
 
 const slideshow = document.querySelector('.slideshow-container');
 

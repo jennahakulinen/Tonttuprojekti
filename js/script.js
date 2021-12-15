@@ -1,3 +1,7 @@
+// Navigaatio scripti
+
+'use strict';
+
 const toggle = document.querySelector(".toggle");
 const menu = document.querySelector(".navigationNav");
 const menuBtn = document.querySelector(".hamBut");

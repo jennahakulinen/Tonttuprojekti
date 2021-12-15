@@ -3,23 +3,6 @@
 const url = 'http://localhost:3000';
 
 
-// const categories = [
-//     {
-//         CategoryID: '1',
-//         CategoryName: 'Leivonta',
-//     },
-//     {
-//         CategoryID: '2',
-//         CategoryName: 'Jouluinen',
-//     },
-//     {
-//         CategoryID: '3',
-//         CategoryName: 'Vegaaninen',
-//     },
-// ];
-
-
-
 const recipeCategories = document.querySelector('.recipe-categories-page');
 
 const CategoryData = (categories) => {

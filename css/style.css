@@ -795,10 +795,6 @@ footer {
   margin-top: 1rem;
 }
 
-/* .recipe-ingredients {
-  display: grid;
-  grid-template-columns: 5% 10% 80%;
-} */
 
 .recipe-grid-container {
   display: grid;
