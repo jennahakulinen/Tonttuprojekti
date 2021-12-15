@@ -1,6 +1,6 @@
 'use strict';
-const url = 'http://localhost:3000'; // change url when uploading to server
-
+// const url = 'http://localhost:3000'; // change url when uploading to server
+const url = 'https://10.114.34.22/app/';
 // select existing html elements
 const addForm = document.querySelector('#addRecipeForm');
 
