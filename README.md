@@ -3,7 +3,7 @@
 
 ## General Information
 - This is a frontend part of our project for our web application development course
-- Goal was to develope a media sharing app in full stack style
+- Goal was to develop a media sharing app in full stack style
 * [Link to backend](https://github.com/jennahakulinen/Tonttuprojekti-backend)
 
 ## Technologies Used
