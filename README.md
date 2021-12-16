@@ -12,7 +12,10 @@
 - Javascript
 
 ## Screenshots
-![etusivupieni](https://user-images.githubusercontent.com/79135621/146341540-c8a9b68b-3d81-48cb-9df6-ab770cf81b1d.PNG)  ![lisääpieni](https://user-images.githubusercontent.com/79135621/146341843-7e1a9925-077a-46e2-8fcc-5db4866d39eb.PNG)  ![käyttäjäpieni](https://user-images.githubusercontent.com/79135621/146341865-82514cb1-999c-4ca6-a9d4-c40fe6595ec4.PNG)
+![etusivupieni](https://user-images.githubusercontent.com/79135621/146343986-a0a33522-8267-43da-b919-4f7a65832f09.PNG)  ![käyttäjäpieni](https://user-images.githubusercontent.com/79135621/146344021-a430a486-1dda-43e4-b1dd-e3aa5e7ff84c.PNG) ![lisääpieni](https://user-images.githubusercontent.com/79135621/146344046-e9a77e17-4145-4d41-a90e-a3d33b0b59af.PNG)
+
+
+
 
 ## Created
 Created by [Jenna Hakulinen](https://github.com/jennahakulinen) and [Ida Olsson](https://github.com/idaols)
