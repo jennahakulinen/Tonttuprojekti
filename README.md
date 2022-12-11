@@ -1,5 +1,5 @@
 # Cookmas
-> App for sharing chrismassy recipes
+> App for sharing christmassy recipes
 
 ## General Information
 - This is a frontend part of our project for our web application development course
